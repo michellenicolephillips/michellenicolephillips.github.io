@@ -1,4 +1,11 @@
 html {
-    background-color: #23151b;
-    color: white;
+    background-color: #24151b;
+    color: #d8c3a5;
+    text-align: left;
+}
+.links{
+    text-align: center;
+}
+a:hover{
+    filter: invert();
 }
