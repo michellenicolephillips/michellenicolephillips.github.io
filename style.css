@@ -29,7 +29,7 @@ li a:hover:not(.active) {
 }
 .content{
     text-align: left;
-    width: 80%;
+    padding: 20px;
 }
 .social{
     text-align: center;
@@ -38,11 +38,14 @@ li a:hover:not(.active) {
 footer a:hover{
     filter: invert();
 }
-#resume{
-    text-align: center;
+.resume{
+    text-align: left;
+    width: 900px;
+    margin: auto;
 }
-.docIFrame {
-    width: 100%;
+#docIFrame {
+    text-align: center;
+    width: 900px;
     height: 1066px;
     margin: auto;
     border: solid 1px lightgray;
