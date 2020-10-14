@@ -1,5 +1,5 @@
 body {
-    background-color: #24151b;
+    background-color: #2e151b;
     color: #d8c3a5;
     text-align: center;
     font-family: sans-serif;
@@ -17,7 +17,7 @@ body {
 }
 a {
     display: block;
-    padding: 8px;
+    padding: 10px;
     text-decoration: none;
     color: inherit;
 }
@@ -27,9 +27,22 @@ li a:hover:not(.active) {
 #active {
     background-color: #1c3334
 }
-.content{
+.intro{
     text-align: left;
     padding: 20px;
+}
+.content{
+    text-align: center;
+}
+.projects{
+    width: 450px;
+    margin: 5px;
+    padding: 5px;
+    border: outset #35191f;
+    display: inline-block;
+}
+.project-info{
+    text-align: left;
 }
 .social{
     text-align: center;
