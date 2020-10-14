@@ -36,6 +36,7 @@ li a:hover:not(.active) {
 }
 .projects{
     width: 450px;
+    height: 500px;
     margin: 5px;
     padding: 5px;
     border: outset #35191f;

@@ -2,55 +2,13 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <title>MP- projects</title>
-        <script>
-            function draw() {
-                var canvas = document.getElementById('city');
-                if (canvas.getContext) {
-                    var ctx = canvas.getContext('2d');
-                    ctx.fillStyle = 'rgb(186, 145, 20)'
-                    ctx.fillRect(0, 0, 400, 400);
-                    ctx.fillStyle = 'rgb(0,0,0)';
-                    drawEllipse(ctx,25, 25, 375, 375)
-                    ctx.fillStyle='rgb(0,0,0)';
-                     
-                }
-        </script>
-        <script>
-            function draw() {
-                var canvas = document.getElementById('plate');
-                if (canvas.getContext) {
-                    var ctx = canvas.getContext('2d');
-                    ctx.fillStyle = 'rgb(186, 145, 20)'
-                    ctx.fillRect(0, 0, 400, 400);
-                    ctx.fillStyle = 'rgb(0,0,0)';
-                    drawEllipse(ctx,25, 25, 375, 375)
-                    ctx.fillStyle='rgb(0,0,0)';
-                     
-                }
-
-                function drawEllipse(ctx, x, y, w, h) {
-                    var kappa = .5522848,
-                        ox = (w / 2) * kappa, // control point offset horizontal
-                        oy = (h / 2) * kappa, // control point offset vertical
-                        xe = x + w,           // x-end
-                        ye = y + h,           // y-end
-                        xm = x + w / 2,       // x-middle
-                        ym = y + h / 2;       // y-middle
-
-                    ctx.beginPath();
-                    ctx.moveTo(x, ym);
-                    ctx.bezierCurveTo(x, ym - oy, xm - ox, y, xm, y);
-                    ctx.bezierCurveTo(xm + ox, y, xe, ym - oy, xe, ym);
-                    ctx.bezierCurveTo(xe, ym + oy, xm + ox, ye, xm, ye);
-                    ctx.bezierCurveTo(xm - ox, ye, x, ym + oy, x, ym);
-                    //ctx.closePath(); // not used correctly, see comments (use to close off open path)
-                    ctx.stroke();
-                }
-
-            }
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+        <script src="javascript/animal.js"></script>
+        <script src="javascript/city.js"></script>
+        <script src="javascript/plate.js"></script>
+        
     </head>
-    <body onload = "draw();">
+    <body>
         <ul class="navbar">
             <li class="navlink"><a href="home.html">Home</a></li>
             <li class="navlink" id="active"><a href="projects.html">Projects</a></li>
@@ -59,15 +17,23 @@
         <p class="content">
             This page contains every project I've work on in my journey to learning to code from the latest project I've worked on to the very first one.
         </p>
-        <div class="projects">
-            <canvas id="city" width="400" height="400" style="border:1px solid #d3d3d3;">
-                Your browser does not support the HTML canvas tag.</canvas>
-            <p class="project-info">Project 2</p>
+        <div class= "projects">
+            <div id="animal"></div>
+            <p class="project-info">
+                3. 
+            </p>
         </div>
-        <div class="projects">
-            <canvas id="plate" width="400" height="400" style="border:1px solid #d3d3d3;">
-            Your browser does not support the HTML canvas tag.</canvas>
-            <p class="project-info">This was the first project I did on Khan Academy.</p>
+        <div class= "projects">
+            <div id="city"></div>
+            <p class="project-info">
+                2.
+            </p>
+        </div>
+        <div class= "projects">
+            <div id="plate"></div>
+            <p class="project-info">
+                1.
+            </p>
         </div>
             <footer>
             <p> Check me out on:<br> 
