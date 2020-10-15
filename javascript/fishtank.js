@@ -29,6 +29,9 @@ let fishtank = new p5(( sketch ) => {
         sketch.fill(0, 0, 0);
         sketch.ellipse(coordinateX+bodyWidth/4, coordinateY, bodyHeight/5, bodyHeight/5);
     };
+    sketch.mouseClicked =() => {
+        drawFish(sketch.mouseX, sketch.mouseY);
+    };
     sketch.draw = () => {
         //static background
         sketch.background(92, 189, 224);
@@ -54,10 +57,5 @@ let fishtank = new p5(( sketch ) => {
       drawBubble(300,350);
       drawBubble(20,150);
       drawBubble(300, 350);
-     
-      sketch.mouseClicked =() => {
-          drawFish(sketch.mouseX, sketch.mouseY);
-      };
-      
   };
   }, 'fishtank');
