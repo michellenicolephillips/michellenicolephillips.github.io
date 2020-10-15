@@ -1,10 +1,6 @@
 let house = new p5(( sketch ) => {
     let doorX = 242;
     let doorY = 290;
-    let singleWindowX = 80;
-    let grassX = 0;
-    let shrubberyX = 50;
-    let treeX = 0;
     let brick;
     let singleWindow;
     let grass;
@@ -18,6 +14,7 @@ let house = new p5(( sketch ) => {
       shrubbery = sketch.loadImage('pictures/TreeShort.png');
       grass = sketch.loadImage('pictures/GrassBlock.png');
       tree = sketch.loadImage('pictures/TreeTall.png');
+      //sketch.noLoop();
     };
   
     sketch.draw = () => {
@@ -47,22 +44,27 @@ let house = new p5(( sketch ) => {
             }
         }
         //single windows
+        let singleWindowX = 80;
         while(singleWindowX<320) {
             sketch.image(singleWindow, singleWindowX, 180, 30, 50);
             singleWindowX= singleWindowX+=100;
+            
         }
         
         //grass
+        let grassX = 0;
         while(grassX<400) {
             sketch.image(grass, grassX, 350, 30, 50);
             grassX= grassX+=20;
         }
         //shrubbery
+        let shrubberyX = 50;
         while(shrubberyX<350) {
             sketch.image(shrubbery, shrubberyX, 325, 30, 50);
             shrubberyX= shrubberyX+=81;
         }
         //tree
+        let treeX = 0;
         while(treeX<400) {
             sketch.image(tree, treeX, 325, 30, 50);
             treeX= treeX+=363;

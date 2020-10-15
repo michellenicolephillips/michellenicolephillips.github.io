@@ -65,7 +65,7 @@ let bookshelf = new p5(( sketch ) => {
             b: 119
         },
         {
-             r: 236,
+            r: 236,
             g: 240,
             b: 120
         },
@@ -75,46 +75,39 @@ let bookshelf = new p5(( sketch ) => {
             b: 185
         }
     ];
-    let bookHeight = 100;
-    let bookWidth = 70;
-    let bookXStart = 15;
-    let bookYStart = 20;
     
     sketch.setup = () => {
       sketch.createCanvas(width, height);
-      star = sketch.loadImage('pictures/star.png');
+      star = sketch.loadImage('pictures/Star.png');
     };
   
     sketch.draw = () => {
-        
-        
         // draw shelf
         for(var yPosition =120 ; yPosition < 400 ; yPosition +=100) {
             sketch.fill(224, 187, 132);
             sketch.rect(0, yPosition, width, 10);
         }
-    
+        let bookHeight = 100;
+        let bookWidth = 70;
+        let bookXStart = 15;
+        let bookYStart = 20;
         // draw one book
         for (var bookIndex = 0 ; bookIndex < books.length ; bookIndex++){
             var book = books[bookIndex];
             var bookXSpacing = bookIndex*95;
-                if((bookXStart-5 + bookXSpacing) >= 320) {
+            if((bookXStart-5 + bookXSpacing) >= 320) {
                     bookYStart +=103;
                     bookXStart -=380;
                 }
-            sketch.fill(book.r, book.g, book.b);
-            sketch.rect(bookXStart-5 + bookXSpacing, bookYStart, 90, 100);
-            sketch.fill(0, 0, 0);
-            sketch.text(book.title, bookXStart + bookXSpacing, bookYStart+9,  bookWidth, bookHeight);
-            sketch.text(book.author, bookXStart + bookXSpacing, bookYStart+50, bookWidth, bookHeight);
+                sketch.fill(book.r, book.g, book.b);
+                sketch.rect(bookXStart-5 + bookXSpacing, bookYStart, 90, 100);
+                sketch.fill(0, 0, 0);
+                sketch.text(book.title, bookXStart + bookXSpacing, bookYStart+9,  bookWidth, bookHeight);
+                sketch.text(book.author, bookXStart + bookXSpacing, bookYStart+50, bookWidth, bookHeight);
             for (var i = 0; i < book.stars; i++) {
                 sketch.image(star, bookXStart-2 + bookXSpacing + i * 10, bookYStart+70, 17, 25);
             }
-          
-        
         }
-        sketch.fill(108, 157, 240);
-        
-        
-    };
+        sketch.fill(108, 157, 240);            
+        };
     }, 'bookshelf');
