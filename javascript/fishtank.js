@@ -16,10 +16,10 @@ let fishtank = new p5(( sketch ) => {
      //fish drawings
      let drawFish = function(coordinateX, coordinateY) {
         sketch.noStroke();
-        let bodyHeight = random(20, 100);
-        let bodyWidth = random(50, 200);
+        let bodyHeight = sketch.random(20, 100);
+        let bodyWidth = sketch.random(50, 200);
         //body
-        sketch.fill(sketch.random(0,255), sketch,random(0,255), sketch.random(0,255));
+        sketch.fill(sketch.random(0,255), sketch.random(0,255), sketch.random(0,255));
         sketch.ellipse(coordinateX, coordinateY, bodyWidth, bodyHeight);
         //tail
         let tailWidth = bodyWidth/4;
@@ -55,9 +55,9 @@ let fishtank = new p5(( sketch ) => {
       drawBubble(20,150);
       drawBubble(300, 350);
      
-  /*    sketch.mouseClicked() = {
+      sketch.mouseClicked =() => {
           drawFish(sketch.mouseX, sketch.mouseY);
       };
-      */
+      
   };
   }, 'fishtank');
