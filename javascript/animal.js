@@ -9,7 +9,7 @@ let animal = new p5(( sketch ) => {
     let insideEarSize = faceSize/5;
     
       sketch.setup = () => {
-        sketch.createCanvas(400, 400);
+        sketch.createCanvas(width, height);
       };
     
       sketch.draw = () => {

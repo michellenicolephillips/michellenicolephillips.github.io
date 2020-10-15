@@ -4,8 +4,6 @@ let city = new p5(( sketch ) => {
   let yPos = 10;
   let xPlane = 0;
   let yPlane = 50;
-  let width = 400;
-  let height = 400;
   
   sketch.setup = () => {
     sketch.createCanvas(width, height);

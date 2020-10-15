@@ -1,6 +1,4 @@
 let magic8 = new p5(( sketch ) => {
-    let width = 400;
-    let height = 400;
     
     sketch.setup = () => {
       sketch.createCanvas(width, height);

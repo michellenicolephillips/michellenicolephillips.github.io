@@ -1,7 +1,7 @@
 let plate = new p5(( sketch ) => {
 
     sketch.setup = () => {
-      sketch.createCanvas(400, 400);
+      sketch.createCanvas(width, height);
     };
   
     sketch.draw = () => {
