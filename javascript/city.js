@@ -2,7 +2,7 @@ let city = new p5(( sketch ) => {
 
   let xPos = 10;
   let yPos = 10;
-  let xPlane = 400;
+  let xPlane = 0;
   let yPlane = 50;
   let width = 400;
   let height = 400;
@@ -30,8 +30,12 @@ let city = new p5(( sketch ) => {
     }
     sketch.fill(255, 255, 255);
     sketch.ellipse(xPlane+10, yPlane,70, 25);//plane body
-    sketch.ellipse(xPlane, yPlane, 20, 60);//plane wings
-    xPlane--;
+    sketch.ellipse(xPlane+20, yPlane, 20, 60);//plane wings
+    //reset plane movement
+    if (xPlane >= width){
+      xPlane -= width
+    } else {
+    xPlane++}
 
     sketch.fill(0, 0, 0);//buildings
     sketch.rect(0, 300, 50, 100);//building 1
