@@ -49,6 +49,10 @@ li a:hover:not(.active) {
 .project-info{
     text-align: left;
 }
+.links{
+    display: inline;
+    color: #da7b93;
+}
 .social{
     text-align: center;
     display: inline;
