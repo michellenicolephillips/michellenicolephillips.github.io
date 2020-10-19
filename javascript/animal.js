@@ -2,11 +2,12 @@ let animal = new p5(( sketch ) => {
 
     let faceX = 190;
     let faceY = 214;
-    let faceSize= 165;
-    let noseSize= faceSize/10;
+    let faceSize = 165;
+    let noseSize = faceSize/10;
     let eyeSize = faceSize/8;
     let outsideEarSize = faceSize/3;
     let insideEarSize = faceSize/5;
+    let gumSize = faceSize/10;
     
       sketch.setup = () => {
         sketch.createCanvas(width, height);
@@ -38,10 +39,13 @@ let animal = new p5(( sketch ) => {
         
         sketch.fill(189, 144, 187);//nose color
         sketch.ellipse(faceX, faceY, noseSize, noseSize);//nose
-        if (noseSize > faceSize){
-            noseSize -= faceSize
+
+        sketch.fill(100, 148, 217);//gum color
+        sketch.ellipse(faceX, faceY+30, gumSize, gumSize);//gum
+        if (gumSize > faceSize){
+            gumSize -= faceSize
         }else {
-        noseSize = noseSize+1;
+        gumSize = gumSize+1;
         }
       };
     }, 'animal');
