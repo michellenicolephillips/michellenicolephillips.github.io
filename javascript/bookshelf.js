@@ -83,6 +83,7 @@ let bookshelf = new p5(( sketch ) => {
   
     sketch.draw = () => {
         // draw shelf
+        sketch.background(224, 240, 211);
         for(var yPosition =120 ; yPosition < 400 ; yPosition +=100) {
             sketch.fill(224, 187, 132);
             sketch.rect(0, yPosition, width, 10);

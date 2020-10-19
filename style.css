@@ -34,13 +34,17 @@ li a:hover:not(.active) {
 .content{
     text-align: center;
 }
+.projects-page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .projects{
     width: 450px;
-    height: 500px;
+    height: 550px;
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     border: outset #35191f;
-    display: inline-block;
 }
 .project-info{
     text-align: left;
