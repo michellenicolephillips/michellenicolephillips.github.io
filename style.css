@@ -21,7 +21,7 @@ a {
     text-decoration: none;
     color: inherit;
 }
-li a:hover:not(.active) {
+.navLink a:hover:not(.active) {
     background-color: #da7b93
 }
 #active {
@@ -34,7 +34,7 @@ li a:hover:not(.active) {
 .content{
     text-align: center;
 }
-.projects-page{
+#javascript-projects{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
