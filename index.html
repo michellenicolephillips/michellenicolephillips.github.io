@@ -1,3 +1,8 @@
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>  
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="/components/nav_bar_component.js" type="text/babel"></script>
+
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
@@ -5,11 +10,7 @@
         <link rel='shortcut icon' type='image/x-icon' href='pictures/favicon.ico' />
     </head>
     <body>
-        <ul class="navbar">
-            <li class="navlink" id="active"><a href="index.html">Home</a></li>
-            <li class="navlink"><a href="projects.html">Projects</a></li>
-            <li class="navlink"><a href="resume.html">Resume</a></li>
-        </ul>
+        <div id="nav_bar_component"></div>
         <div id = "intro">
             <h1> Welcome!</h1>
             <p class="intro">
