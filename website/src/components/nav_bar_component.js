@@ -1,3 +1,5 @@
+import React from 'react';
+import './nav_bar_component.css';
 
 class NavBar extends React.Component {
   render() {
@@ -10,4 +12,5 @@ class NavBar extends React.Component {
     );
   }
 }
-ReactDOM.render(<NavBar />, document.getElementById('nav_bar_component'));
+
+export default NavBar;
