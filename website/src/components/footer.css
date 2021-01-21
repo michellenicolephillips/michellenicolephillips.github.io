@@ -1,0 +1,14 @@
+footer{
+    background-color: #2e151b; 
+}
+.links{
+    display: inline;
+    color: #da7b93;
+}
+.social{
+    text-align: center;
+    display: inline;
+}
+footer a:hover{
+    filter: invert();
+}
