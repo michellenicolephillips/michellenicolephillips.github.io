@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import './nav_bar_component.css';
+import Home from './home';
 
 class NavBar extends React.Component {
   render() {
@@ -32,9 +33,6 @@ class NavBar extends React.Component {
     </Router>
     );
   }
-}
-function Home() {
-  return <h2>Home</h2>;
 }
 
 function Projects() {
