@@ -18,6 +18,8 @@ class Home extends React.Component {
                 <li>CSS</li>
                 <li>Javascript</li>
                 <li>SQL</li>
+                <li>C#</li>
+                <li>React</li>
             </ul>
             <p className="intro">
                 Follow along as I learn a new industry!

@@ -8,6 +8,7 @@ import {
 import './nav_bar_component.css';
 import Home from './home';
 import Resume from './resume';
+import Projects from './projects';
 
 class NavBar extends React.Component {
   render() {
@@ -34,10 +35,6 @@ class NavBar extends React.Component {
     </Router>
     );
   }
-}
-
-function Projects() {
-  return <h2>Projects</h2>;
 }
 
 
