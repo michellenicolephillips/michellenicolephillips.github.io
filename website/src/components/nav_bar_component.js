@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import './nav_bar_component.css';
 import Home from './home';
+import Resume from './resume';
 
 class NavBar extends React.Component {
   render() {
@@ -39,8 +40,5 @@ function Projects() {
   return <h2>Projects</h2>;
 }
 
-function Resume() {
-  return <h2>Resume</h2>;
-}
 
 export default NavBar;

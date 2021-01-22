@@ -1,10 +1,4 @@
-.intro{
-    text-align: left;
-    padding: 20px;
-}
-.content{
-    text-align: center;
-}
+
 #javascript-projects{
     display: flex;
     flex-wrap: wrap;
@@ -23,15 +17,3 @@
 }
 
 }
-.resume{
-    text-align: left;
-    width: 900px;
-    margin: auto;
-}
-#docIFrame {
-    text-align: center;
-    width: 900px;
-    height: 1066px;
-    margin: auto;
-    border: solid 1px lightgray;
-  }
