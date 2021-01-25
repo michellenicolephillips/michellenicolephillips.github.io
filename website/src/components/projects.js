@@ -1,14 +1,14 @@
 import React from 'react';
 import './projects.css';
-import Bookshelf from './p5js components/bookshelf';
-import Rain from './p5js components/rain';
-import House from './p5js components/house';
-import Magic8 from './p5js components/magic8';
-import Fishtank from './p5js components/fishtank';
-import Spork from './p5js components/spork';
-import Animal from './p5js components/animal';
-import City from './p5js components/city';
-import Plate from './p5js components/plate';
+import Bookshelf from './p5js-components/bookshelf';
+import Rain from './p5js-components/rain';
+import House from './p5js-components/house';
+import Magic8 from './p5js-components/magic8';
+import Fishtank from './p5js-components/fishtank';
+import Spork from './p5js-components/spork';
+import Animal from './p5js-components/animal';
+import City from './p5js-components/city';
+import Plate from './p5js-components/plate';
 
 
 
