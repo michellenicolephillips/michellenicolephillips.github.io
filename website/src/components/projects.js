@@ -1,5 +1,4 @@
 import React from 'react';
-import './projects.css';
 import Bookshelf from './p5js-components/bookshelf';
 import Rain from './p5js-components/rain';
 import House from './p5js-components/house';

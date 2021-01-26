@@ -41,9 +41,9 @@ class Fishtank extends React.Component {
             sketch.fill(0, 0, 0);
             sketch.ellipse(coordinateX+bodyWidth/4, coordinateY, bodyHeight/5, bodyHeight/5);
         };
-        sketch.mouseClicked =() => {
-            drawFish(sketch.mouseX, sketch.mouseY);
-        };
+        //sketch.mouseClicked =() => {
+          //  drawFish(sketch.mouseX, sketch.mouseY);
+       // };
         sketch.draw = () => {
             //static background
             sketch.background(92, 189, 224);
@@ -69,8 +69,30 @@ class Fishtank extends React.Component {
           drawBubble(300,350);
           drawBubble(20,150);
           drawBubble(300, 350);
+
+          //refresh button
+            let buttonX =325;
+            let buttonY = 10;
+            let buttonHeight=30;
+            let buttonWidth=60;
+            sketch.fill(255,255,255);
+            sketch.rect(buttonX, buttonY, buttonWidth, buttonHeight);
+            sketch.fill(0,0,0);
+            sketch.text("Refresh", buttonX+10, buttonY+20);
+
+            //mouse clicked movements
+            sketch.mouseClicked = function(){
+              drawFish(sketch.mouseX, sketch.mouseY);
+
+              if (sketch.mouseX >= buttonX && sketch.mouseX <= (buttonX+buttonWidth) &&
+                sketch.mouseY >= buttonY && sketch.mouseY <= (buttonY+buttonHeight)) {
+                  sketch.redraw();
+                }
+              }     
+         
+        
       };
-      };
+    }
       componentDidMount() {
         this.myP5 = new p5(this.Sketch, this.myRef.current)
       }
