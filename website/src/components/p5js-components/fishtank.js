@@ -41,9 +41,7 @@ class Fishtank extends React.Component {
             sketch.fill(0, 0, 0);
             sketch.ellipse(coordinateX+bodyWidth/4, coordinateY, bodyHeight/5, bodyHeight/5);
         };
-        //sketch.mouseClicked =() => {
-          //  drawFish(sketch.mouseX, sketch.mouseY);
-       // };
+      
         sketch.draw = () => {
             //static background
             sketch.background(92, 189, 224);

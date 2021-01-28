@@ -39,6 +39,27 @@ class Rain extends React.Component {
                 sketch.ellipse(xPositions[i], yPositions[i] % 400, 10, 10);
                 yPositions[i] += 5;
             }
+                //refresh button
+                let buttonX =325;
+                let buttonY = 10;
+                let buttonHeight=30;
+                let buttonWidth=60;
+                sketch.fill(255,255,255);
+                sketch.rect(buttonX, buttonY, buttonWidth, buttonHeight);
+                sketch.fill(0,0,0);
+                sketch.text("Refresh", buttonX+10, buttonY+20);
+    
+                //mouse clicked movements
+                sketch.mouseClicked = function(){
+                  if (sketch.mouseX >= buttonX && sketch.mouseX <= (buttonX+buttonWidth) &&
+                    sketch.mouseY >= buttonY && sketch.mouseY <= (buttonY+buttonHeight)) {
+                        xPositions.splice(0, i);
+                        yPositions.splice(0, i);
+                        rColor.splice(0,i);
+                        bColor.splice(0,i);
+                        gColor.splice(0,i);
+                    }
+                  }   
         };
         };
         componentDidMount() {
