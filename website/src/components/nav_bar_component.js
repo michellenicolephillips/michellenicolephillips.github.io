@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  NavLink
 } from "react-router-dom";
 import './nav_bar_component.css';
 import Home from './home';
@@ -16,9 +16,9 @@ class NavBar extends React.Component {
     <Router>
       <div>
         <ul className="navbar">
-            <li className="navlink" id="active"><Link to="/">Home</Link></li>
-            <li className="navlink"><Link to="/projects">Projects</Link></li>
-            <li className="navlink"><Link to="/resume">Resume</Link></li>
+            <li className="navlink"><NavLink to="/home" activeClassName="active">Home</NavLink></li>
+            <li className="navlink"><NavLink to="/projects" activeClassName="active">Projects</NavLink></li>
+            <li className="navlink"><NavLink to="/resume" activeClassName="active">Resume</NavLink></li>
         </ul>
         <Switch>
           <Route path="/projects">
@@ -27,7 +27,7 @@ class NavBar extends React.Component {
           <Route path="/resume">
             <Resume />
           </Route>
-          <Route path="/">
+          <Route path="/home">
             <Home />
           </Route>
         </Switch>

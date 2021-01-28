@@ -18,6 +18,6 @@ a {
 li a:hover {
     background-color: #efe2ba;
 }
-#active {
+.active {
     background-color: #f13c20;
 }

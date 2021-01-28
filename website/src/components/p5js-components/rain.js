@@ -53,8 +53,8 @@ class Rain extends React.Component {
                 sketch.mouseClicked = function(){
                   if (sketch.mouseX >= buttonX && sketch.mouseX <= (buttonX+buttonWidth) &&
                     sketch.mouseY >= buttonY && sketch.mouseY <= (buttonY+buttonHeight)) {
-                        xPositions.splice(0, i);
-                        yPositions.splice(0, i);
+                        xPositions.splice(1, i);
+                        yPositions.splice(1, i);
                         rColor.splice(0,i);
                         bColor.splice(0,i);
                         gColor.splice(0,i);

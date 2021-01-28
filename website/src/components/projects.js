@@ -17,7 +17,7 @@ class Projects extends React.Component {
             <div> 
                 <p className="content">
                     This page contains every project I've work on in my journey to learning to code from the latest project I've worked on to the very first one. <br/>
-                    I started with<a className="links "href="https://www.codecademy.com/" target="_blank"><strong>Codecademy</strong></a>for CSS/HTML and moved to<a className= "links" href="https://www.khanacademy.org/" target="_blank"><strong>Khan Academy</strong></a>for Javascript and SQL.<br/>
+                    I started with<a className="links "href="https://www.codecademy.com/" target="_blank" rel="noreferrer"><strong>Codecademy</strong></a>for CSS/HTML and moved to<a className= "links" href="https://www.khanacademy.org/" target="_blank" rel="noreferrer"><strong>Khan Academy</strong></a>for Javascript and SQL.<br/>
                     I will continue to add to this page as I learn more languages. Currently I am learning C# and React.
                 </p>
                 <Bookshelf/>
