@@ -16,7 +16,7 @@ class NavBar extends React.Component {
     <Router>
       <div>
         <ul className="navbar">
-            <li className="navlink"><NavLink to="/home" activeClassName="active">Home</NavLink></li>
+            <li className="navlink"><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
             <li className="navlink"><NavLink to="/projects" activeClassName="active">Projects</NavLink></li>
             <li className="navlink"><NavLink to="/resume" activeClassName="active">Resume</NavLink></li>
         </ul>
@@ -27,7 +27,7 @@ class NavBar extends React.Component {
           <Route path="/resume">
             <Resume />
           </Route>
-          <Route path="/home">
+          <Route path="/">
             <Home />
           </Route>
         </Switch>

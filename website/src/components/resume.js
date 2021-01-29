@@ -12,7 +12,7 @@ class Resume extends React.Component {
             Below is my resume showcasing programs and skills I utilized in hospitality.
             </p>
             <br/>
-        <iframe id="docIFrame"
+        <iframe id="docIFrame" title="resume"
     src="https://docs.google.com/document/d/e/2PACX-1vTfMmrO8m_s9ni51arWRidgTCeLGYfLCG1CWSPWyYX2IKxBbop8nkccyGeiQAmZvMK98F2mHIiw8pkX/pub?embedded=true">
         </iframe>
         <p className="resume">
