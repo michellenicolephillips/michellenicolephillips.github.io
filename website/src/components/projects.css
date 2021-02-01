@@ -1,22 +1,42 @@
 
-.javascript-projects{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 .projects{
     width: 450px;
     height: 525px;
-    margin: 5px;
+    margin: 5px auto;
     padding: 10px;
     border: outset #394d90;
     background-color: #4056a1;
-
-}
+} 
 .project-info{
     text-align: left;
 }
 .links{
     display: inline;
     color: #f13c20;
+}
+.projectbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+ 
+}
+.projlink{
+    justify-content: center;
+    display: inline;
+    float: left;
+    background-color: #c5cbe3; 
+    color: #4056a1;
+}
+a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+li a:hover {
+    background-color: #efe2ba;
+}
+.active {
+    background-color: #f13c20;
 }
