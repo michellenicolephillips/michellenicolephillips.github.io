@@ -1,7 +1,7 @@
 import React from 'react';
 import p5 from 'p5';
 import '../projects.css';
-import starImage from '../../res/images/star.png';
+import starImage from '../../res/images/Star.png';
 
 class Bookshelf extends React.Component {
     constructor(props) {
