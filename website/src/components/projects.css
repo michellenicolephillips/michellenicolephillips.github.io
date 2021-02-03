@@ -15,6 +15,7 @@
     color: #f13c20;
 }
 .projectbar {
+    display: inline-block;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -22,11 +23,10 @@
  
 }
 .projlink{
-    justify-content: center;
-    display: inline;
     float: left;
-    background-color: #c5cbe3; 
-    color: #4056a1;
+    background-color: #4056a1; 
+    color: #c5cbe3;
+    text-decoration: underline;
 }
 a {
     display: block;
@@ -37,6 +37,8 @@ a {
 li a:hover {
     background-color: #efe2ba;
 }
-.active {
-    background-color: #f13c20;
+.projactive {
+    color: #f13c20;
+    background-color: #4056a1;
+    text-decoration: underline;
 }

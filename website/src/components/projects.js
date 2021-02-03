@@ -30,15 +30,15 @@ class Projects extends React.Component {
         <Router>
       <div>
         <ul className="projectbar">
-            <li className="projlink"><NavLink exact to="/bookshelf" activeClassName="active">Bookshelf</NavLink></li>
-            <li className="projlink"><NavLink to="/rain" activeClassName="active">Rain</NavLink></li>
-            <li className="projlink"><NavLink to="/house" activeClassName="active">House</NavLink></li>
-            <li className="projlink"><NavLink exact to="/magic8" activeClassName="active">Fortune Telling</NavLink></li>
-            <li className="projlink"><NavLink to="/fishtank" activeClassName="active">Fishtank</NavLink></li>
-            <li className="projlink"><NavLink to="/spork" activeClassName="active">Marketing</NavLink></li>
-            <li className="projlink"><NavLink to="/animal" activeClassName="active">Mouse</NavLink></li>
-            <li className="projlink"><NavLink to="/city" activeClassName="active">City Skyline</NavLink></li>
-            <li className="projlink"><NavLink to="/plate" activeClassName="active">What's for dinner?</NavLink></li>
+            <li className="projlink"><NavLink exact to="/bookshelf" activeClassName="projactive">Bookshelf</NavLink></li>
+            <li className="projlink"><NavLink to="/rain" activeClassName="projactive">Rain</NavLink></li>
+            <li className="projlink"><NavLink to="/house" activeClassName="projactive">House</NavLink></li>
+            <li className="projlink"><NavLink exact to="/magic8" activeClassName="projactive">Fortune Telling</NavLink></li>
+            <li className="projlink"><NavLink to="/fishtank" activeClassName="projactive">Fishtank</NavLink></li>
+            <li className="projlink"><NavLink to="/spork" activeClassName="projactive">Marketing</NavLink></li>
+            <li className="projlink"><NavLink to="/animal" activeClassName="projactive">Mouse</NavLink></li>
+            <li className="projlink"><NavLink to="/city" activeClassName="projactive">City Skyline</NavLink></li>
+            <li className="projlink"><NavLink to="/plate" activeClassName="projactive">What's for dinner?</NavLink></li>
         </ul>
         <Switch>
           <Route path="/bookshelf">
