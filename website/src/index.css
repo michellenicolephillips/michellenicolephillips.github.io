@@ -2,11 +2,8 @@ body {
   background-color: #4056a1;
   color: #c5cbe3;
   text-align: center;
+  justify-content: center;
   font-family: sans-serif;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-size: 20%;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
