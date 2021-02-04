@@ -6,7 +6,10 @@ import './home.css';
 class Home extends React.Component {
   render() {
     return (
-        <div> 
+        <div>
+            <head>
+                <title>Michelle P. - Home</title>
+            </head> 
             <h1>Welcome!</h1>
             <p className="intro">
                 Hello, My name is Michelle!<br/>

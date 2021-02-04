@@ -7,6 +7,9 @@ class Resume extends React.Component {
   render() {
     return (
         <div>
+             <head>
+                <title>Michelle P. - Resume</title>
+            </head> 
             <br/>
             <p className="resume">Quick learning, self-starter seeking first time employment in the tech industry.
             Below is my resume showcasing programs and skills I utilized in hospitality.

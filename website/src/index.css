@@ -2,9 +2,14 @@ body {
   background-color: #4056a1;
   color: #c5cbe3;
   text-align: center;
+  font-family: sans-serif;
+  background-image: url(../src/res/images/favicon.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 20%;
   justify-content: center;
   font-family: sans-serif;
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,3 +18,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ 
