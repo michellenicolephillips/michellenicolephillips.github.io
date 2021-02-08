@@ -1,8 +1,8 @@
 
 .social{
-    text-align: center;
-    display: inline;
+     text-align: center;
+     display: inline;
 }
 footer a:hover{
-    filter: invert();
+     filter: invert();
 }
