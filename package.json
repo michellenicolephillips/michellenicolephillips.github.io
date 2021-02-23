@@ -1,5 +1,6 @@
 {
   "name": "website",
+  "homepage": "http://michellenicole23.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
