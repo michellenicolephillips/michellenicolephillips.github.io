@@ -1,0 +1,8 @@
+
+.social{
+     text-align: center;
+     display: inline;
+}
+footer a:hover{
+     filter: invert();
+}
