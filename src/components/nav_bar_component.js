@@ -13,18 +13,18 @@ import Projects from './projects';
 class NavBar extends React.Component {
      render() {
           return ( 
-               <Router>
+               <Router basename="/portfolio">
                     <div>
                          <ul className="navbar">
                               <li className="navlink"><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
-                              <li className="navlink"><NavLink exact to="/projects" activeClassName="active">Projects</NavLink></li>
-                              <li className="navlink"><NavLink exact to="/resume" activeClassName="active">Resume</NavLink></li>
+                              <li className="navlink"><NavLink exact to="/projects/" activeClassName="active">Projects</NavLink></li>
+                              <li className="navlink"><NavLink exact to="/resume/" activeClassName="active">Resume</NavLink></li>
                          </ul>
                          <Switch>
-                              <Route path="/projects">
+                              <Route path="/projects/">
                                    <Projects />
                               </Route>
-                              <Route path="/resume">
+                              <Route path="/resume/">
                                    <Resume />
                               </Route>
                               <Route path="/">
