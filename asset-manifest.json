@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.655f0b98.chunk.css",
-    "main.js": "/portfolio/static/js/main.dc473be0.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.dc473be0.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.75e37046.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.75e37046.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.1c76f787.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.1c76f787.js.map",
     "static/js/2.32da178a.chunk.js": "/portfolio/static/js/2.32da178a.chunk.js",
@@ -12,12 +12,13 @@
     "index.html": "/portfolio/index.html",
     "static/css/main.655f0b98.chunk.css.map": "/portfolio/static/css/main.655f0b98.chunk.css.map",
     "static/js/2.32da178a.chunk.js.LICENSE.txt": "/portfolio/static/js/2.32da178a.chunk.js.LICENSE.txt",
+    "static/media/babyshowerwebsite.1e830cf7.gif": "/portfolio/static/media/babyshowerwebsite.1e830cf7.gif",
     "static/media/index.css": "/portfolio/static/media/favicon.63b7ab42.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1c76f787.js",
     "static/js/2.32da178a.chunk.js",
     "static/css/main.655f0b98.chunk.css",
-    "static/js/main.dc473be0.chunk.js"
+    "static/js/main.75e37046.chunk.js"
   ]
 }
