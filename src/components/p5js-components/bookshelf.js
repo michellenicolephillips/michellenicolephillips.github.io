@@ -1,7 +1,6 @@
 import React from 'react';
 import p5 from 'p5';
 import '../projects.css';
-import starImage from '../../res/images/Star.png';
 
 class Bookshelf extends React.Component {
      constructor(props) {
@@ -11,110 +10,181 @@ class Bookshelf extends React.Component {
      Sketch = ( sketch ) => {
           let width = 400;
           let height = 400;
-          let star;
           let books = [
                {
                     title: "Crazy Rich Asians",
                     author: "Kevin Kwan",
-                    stars: 4,
-                    r: 201,
-                    g: 255,
-                    b: 219
+                    r: 255,
+                    g: 128,
+                    b: 128
                },
                {
                     title: "The Catcher In the Rye",
                     author: "J. D. Salinger",
-                    stars: 3,
-                    r: 155,
-                    g: 155,
-                    b: 219
+                    r: 204,
+                    g: 0,
+                    b: 0
                },
                {
                     title: "Sick In The Head",
                     author: "Judd Apatow",
-                    stars: 3,
-                    r: 230,
-                    g: 138,
-                    b: 247
+                    r: 255,
+                    g: 255,
+                    b: 255
                },
                {
                     title: "Alice In Wonderland",
                     author: "Lewis Carroll",
-                    stars: 4,
-                    r: 242,
-                    g: 186,
-                    b: 119
+                    r: 51,
+                    g: 77,
+                    b: 0
                },
                {
                     title: "Into The Wild",
                     author: "Jon Krakauer",
-                    stars: 4,
-                    r: 236,
-                    g: 240,
-                    b: 120
+                    r: 255,
+                    g: 255,
+                    b: 255
                },
                {   title: "Gone Girl",
                     author: "Gillian Flynn",
-                    stars: 5,
-                    r: 108,
-                    g: 157,
-                    b: 185
+                    r: 255,
+                    g: 71,
+                    b: 26
                },
                {   title: "Pride & Prejudice",
                     author: "Jane Austen",
-                    stars: 5,
-                    r: 201,
-                    g: 255,
-                    b: 219
+                    r: 51,
+                    g: 77,
+                    b: 0
                },
                {   title: "The Handmaid's Tale",
-                    author: "Margaret Atwood",
-                    stars: 5,    
-                    r: 155,
-                    g: 155,
-                    b: 219
+                    author: "Margaret Atwood", 
+                    r: 204,
+                    g: 0,
+                    b: 0
                },
                {   title: "The Testaments",
                     author: "Margaret Atwood",
-                    stars: 4,
-                    r: 230,
-                    g: 138,
-                    b: 247
+                    r: 0,
+                    g: 40,
+                    b: 77
                },
-               {   title: "Dark Places",
-                    author: "Gillian Flynn",
-                    stars: 4,
-                    r: 242,
-                    g: 186,
-                    b: 119
+               {   title: "Looking for Alaska",
+                    author: "John Green",
+                    r: 255,
+                    g: 255,
+                    b: 255
                },
                {
                     title: "Little Women",
                     author: "Louisa Alcott",
-                    stars: 4,
-                    r: 236,
-                    g: 240,
-                    b: 120
+                    r: 51,
+                    g: 77,
+                    b: 0
+               },
+               {
+                    title: "Perks of Being a Wallflower",
+                    author: "Stephen Chbosky",
+                    r: 153,
+                    g: 255,
+                    b: 51
+               },
+               {
+                    title: "My Own Words",
+                    author: "Ruth Bader Ginsburg",
+                    r: 134,
+                    g: 45,
+                    b: 45
+               },
+               {
+                    title: "China Rich Girlfriend",
+                    author: "Kevin Kwan",
+                    r: 64,
+                    g: 86,
+                    b: 161
+               },
+               {
+                    title: "Rich People Problems",
+                    author: "Kevin Kwan",
+                    r: 0,
+                    g: 204,
+                    b: 153
                },
                {
                     title: "Sharp Objects",
                     author: "Gillian Flynn",
-                    stars: 5,
-                    r: 108,
-                    g: 157,
-                    b: 185
+                    r: 0,
+                    g: 0,
+                    b: 204
+               },
+               {
+                    title: "Dark Places",
+                    author: "Gillian Flynn",
+                    r: 0,
+                    g: 153,
+                    b: 0
+               },
+               {
+                    title: "Eleanor and Park",
+                    author: "Rainbow Rowell",
+                    r: 197,
+                    g: 203,
+                    b: 227
+               },
+               {
+                    title: "The Scarlett Letter",
+                    author: "Nathaniel Hawthorne",
+                    r: 204,
+                    g: 0,
+                    b: 0
+               },
+               {
+                    title: "Little Fires Everywhere",
+                    author: "Celeste Ng",
+                    r: 51,
+                    g: 102,
+                    b: 204
+               },
+               {
+                    title: "Joy Luck Club",
+                    author: "Amy Tan",
+                    r: 204,
+                    g: 0,
+                    b: 0
+               },
+               {
+                    title: "Harry Potter and the Sorcerer's Stone",
+                    author: "J.K. Rowling",
+                    r: 51,
+                    g: 0,
+                    b: 102
+               },
+               {
+                    title: "Harry Potter and the Chamber of Secrets",
+                    author: "J.K. Rowling",
+                    r: 77,
+                    g: 77,
+                    b: 255
+                   
+               },
+               {
+                    title: "Harry Potter and the Prisoner of Azkaban",
+                    author: "J.K. Rowling",
+                    r: 0,
+                    g: 77,
+                    b: 77
                }
           ];
     
           sketch.setup = () => {
                sketch.createCanvas(width, height);
-               star = sketch.loadImage(starImage);
           };
   
           sketch.draw = () => {
           // draw shelf
                sketch.background(224, 240, 211);
-               for(var yPosition =120 ; yPosition < 400 ; yPosition +=100) {
+               for(var yPosition =120 ; yPosition < 1200 ; yPosition +=100) {
                     sketch.fill(224, 187, 132);
                     sketch.rect(0, yPosition, width, 10);
                }
@@ -135,11 +205,9 @@ class Bookshelf extends React.Component {
                     sketch.fill(0, 0, 0);
                     sketch.text(book.title, bookXStart + bookXSpacing, bookYStart+9,  bookWidth, bookHeight);
                     sketch.text(book.author, bookXStart + bookXSpacing, bookYStart+50, bookWidth, bookHeight);
-                    for (var i = 0; i < book.stars; i++) {
-                         sketch.image(star, bookXStart-2 + bookXSpacing + i * 10, bookYStart+70, 17, 25);
-                    }
+                    
                }
-               sketch.fill(108, 157, 240);            
+               sketch.fill(108, 157, 240);          
           };
      };
      componentDidMount() {
@@ -153,7 +221,8 @@ class Bookshelf extends React.Component {
                     <p className="project-info">
                          This project uses most of what I learned about JS in Khan Academy. 
                          I learned objects for this project and then used arrays, for loops, and if statments to build it.
-                         It's a work in progress as I'm adding titles of books as I read them during this pandemic.
+                         Another project I've been working on is reading more. This bookshelf contains everything I've read since the start of the pandemic.
+                         I will continue to add as I read!
                     </p>
                </div>
           );

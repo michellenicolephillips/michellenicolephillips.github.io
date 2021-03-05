@@ -26,10 +26,11 @@ class Projects extends React.Component {
                     <p className="content">
                          This page contains every project I've work on in my journey to learning to code from the latest project I've worked on to the very first one. <br/>
                          I started with<a className="links "href="https://www.codecademy.com/" target="_blank" rel="noreferrer"><strong>Codecademy</strong></a>for CSS/HTML and moved to<a className= "links" href="https://www.khanacademy.org/" target="_blank" rel="noreferrer"><strong>Khan Academy</strong></a>for Javascript and SQL.<br/>
-                         I will continue to add to this page as I learn more languages. Currently I am learning C# and React.
+                         I will continue to add to this page as I learn more languages.
                     </p>
                     <Router>
                          <div>
+                              <h2>Javascript Projects</h2>
                               <ul className="projectbar">
                                    <li className="projlink"><NavLink exact to="/" activeClassName="projactive">Bookshelf</NavLink></li>
                                    <li className="projlink"><NavLink exact to="/rain" activeClassName="projactive">Rain</NavLink></li>
@@ -72,6 +73,14 @@ class Projects extends React.Component {
                               </Switch>
                          </div>
                     </Router>
+                    <h2>HTML/CSS Projects</h2>
+                    <div className="projects">
+                         <p className="content">
+                              <img src="./src/res/images/babyshowerwebsite.gif" alt="gif of baby shower website"/>
+                              <br/>
+                              <a className="links" href="https://babynelson.life/" target="_blank" rel="noreferrer">This</a>is the first project I built during the pandemic as part of a zoom baby shower. 
+                         </p>
+                    </div>
                </div>
           );
      }
