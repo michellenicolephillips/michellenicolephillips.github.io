@@ -26,6 +26,7 @@ class Home extends React.Component {
                          <li>React</li>
                     </ul>
                     <p className="intro">
+                         Currently working on Java.
                          Follow along as I learn a new industry!
                     </p>
                </div>
