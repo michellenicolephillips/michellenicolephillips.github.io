@@ -15,6 +15,7 @@ import Spork from './p5js-components/spork';
 import Animal from './p5js-components/animal';
 import City from './p5js-components/city';
 import Plate from './p5js-components/plate';
+import websitegif from '../res/images/babyshowerwebsite.gif';
 
 class Projects extends React.Component {
      render() {
@@ -74,9 +75,10 @@ class Projects extends React.Component {
                          </div>
                     </Router>
                     <h2>HTML/CSS Projects</h2>
-                    <div className="projects">
+                    <div className="html-project">
                          <p className="content">
-                              <img src="./src/res/images/babyshowerwebsite.gif" alt="gif of baby shower website"/>
+                              <img src={websitegif} alt="gif of baby shower website"/>
+                              <br/>
                               <br/>
                               <a className="links" href="https://babynelson.life/" target="_blank" rel="noreferrer">This</a>is the first project I built during the pandemic as part of a zoom baby shower. 
                          </p>
