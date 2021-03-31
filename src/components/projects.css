@@ -4,8 +4,8 @@
      height: 525px;
      margin: 5px auto;
      padding: 10px;
-     border: outset #394d90;
-     background-color: #4056a1;
+     border: outset #fcf8eb;
+     background-color: #ede7d3;
 } 
 .project-info{
      text-align: left;
@@ -23,8 +23,8 @@
 }
 .projlink{
      float: left;
-     background-color: #4056a1; 
-     color: #c5cbe3;
+     background-color: #ede7d3; 
+     color: #4056a1;
      text-decoration: underline;
 }
 a {
@@ -34,10 +34,10 @@ a {
      color: inherit;
 }
 li a:hover {
-     background-color: #efe2ba;
+     background-color: #627dd9;
 }
 .projactive {
      color: #f13c20;
-     background-color: #4056a1;
+     background-color: #ede7d3;
      text-decoration: underline;
 }
