@@ -4,8 +4,8 @@
      height: 525px;
      margin: 5px auto;
      padding: 10px;
-     border: outset #fcf8eb;
-     background-color: #ede7d3;
+     border: outset #fff;
+     background-color: #ffffff;
 } 
 .project-info{
      text-align: left;
@@ -23,8 +23,8 @@
 }
 .projlink{
      float: left;
-     background-color: #ede7d3; 
-     color: #4056a1;
+     background-color: #fff; 
+     color: #00001a;
      text-decoration: underline;
 }
 a {
@@ -38,6 +38,6 @@ li a:hover {
 }
 .projactive {
      color: #f13c20;
-     background-color: #ede7d3;
+     background-color: #fff;
      text-decoration: underline;
 }
