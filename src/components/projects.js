@@ -29,7 +29,7 @@ class Projects extends React.Component {
                          I started with<a className="links "href="https://www.codecademy.com/" target="_blank" rel="noreferrer"><strong>Codecademy</strong></a>for CSS/HTML and moved to<a className= "links" href="https://www.khanacademy.org/" target="_blank" rel="noreferrer"><strong>Khan Academy</strong></a>for Javascript and SQL.<br/>
                          I will continue to add to this page as I learn more languages.
                     </p>
-                    <Router>
+                    <Router basename = "/projects/">
                          <div>
                               <h2>Javascript Projects</h2>
                               <ul className="projectbar">
