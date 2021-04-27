@@ -13,7 +13,7 @@ import Projects from './projects';
 class NavBar extends React.Component {
      render() {
           return ( 
-               <Router basename="/portfolio">
+               <Router basename="/">
                     <div>
                          <ul className="navbar">
                               <li className="navlink"><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
