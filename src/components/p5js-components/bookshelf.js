@@ -174,6 +174,69 @@ class Bookshelf extends React.Component {
                     r: 0,
                     g: 77,
                     b: 77
+               },
+               {
+                    title: "Harry Potter and the Goblet of Fire",
+                    author: "J.K. Rowling",
+                    r: 30,
+                    g: 148,
+                    b: 68
+               },
+               {
+                    title: "Harry Potter and the Order of the Pheonix",
+                    author: "J.K. Rowling",
+                    r: 31,
+                    g: 37,
+                    b: 94
+               },
+               {
+                    title: "Harry Potter and the Half Blood Prince",
+                    author: "J.K. Rowling",
+                    r: 17,
+                    g: 97,
+                    b: 17
+               },
+               {
+                    title: "Harry Potter and the Deathly Hallows",
+                    author: "J.K. Rowling",
+                    r: 235,
+                    g: 146,
+                    b: 77
+               },
+               {
+                    title: "Everything I Never Told You",
+                    author: "Celeste Ng",
+                    r: 0,
+                    g: 40,
+                    b: 77
+               },
+               {
+                    title: "Harry Potter and Cursed Child Pt 1 & 2",
+                    author: " ",
+                    r: 252,
+                    g: 186,
+                    b: 3
+               },
+               {
+                    title: "Where the Crawdads Sing",
+                    author: "Delia Owens",
+                    r: 227,
+                    g: 128,
+                    b: 95
+               },
+               {
+                    title: "The Hobbit",
+                    author: "J.R.R. Tolkien",
+                    r: 227,
+                    g: 212,
+                    b: 207
+               },
+               {
+                    title: "The Fellowship of the Ring",
+                    author: "J.R.R. Tolkien",
+                    r: 227,
+                    g: 202,
+                    b: 207
                }
           ];
     
