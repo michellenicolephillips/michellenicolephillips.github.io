@@ -2,14 +2,18 @@ import React from 'react';
 import p5 from 'p5';
 import '../projects.css';
 
+const divStyle={
+     overflowY: 'scroll',
+     height:'400px',
+   };
+
+
 class Bookshelf extends React.Component {
      constructor(props) {
           super(props);
           this.myRef = React.createRef();
      }
      Sketch = ( sketch ) => {
-          let width = 400;
-          let height = 400;
           let books = [
                {
                     title: "Crazy Rich Asians",
@@ -238,7 +242,10 @@ class Bookshelf extends React.Component {
                     g: 202,
                     b: 207
                }
+               
           ];
+          let width = 400;
+          let height = (books.length * (books.length));
     
           sketch.setup = () => {
                sketch.createCanvas(width, height);
@@ -247,7 +254,8 @@ class Bookshelf extends React.Component {
           sketch.draw = () => {
           // draw shelf
                sketch.background(224, 240, 211);
-               for(var yPosition =120 ; yPosition < 1200 ; yPosition +=100) {
+               
+               for(var yPosition =120 ; yPosition < (books.length*120) ; yPosition +=120) {
                     sketch.fill(224, 187, 132);
                     sketch.rect(0, yPosition, width, 10);
                }
@@ -260,14 +268,14 @@ class Bookshelf extends React.Component {
                     var book = books[bookIndex];
                     var bookXSpacing = bookIndex*95;
                     if((bookXStart-5 + bookXSpacing) >= 320) {
-                         bookYStart +=103;
+                         bookYStart +=120;
                          bookXStart -=380;
                     }
                     sketch.fill(book.r, book.g, book.b);
                     sketch.rect(bookXStart-5 + bookXSpacing, bookYStart, 90, 100);
                     sketch.fill(0, 0, 0);
                     sketch.text(book.title, bookXStart + bookXSpacing, bookYStart+9,  bookWidth, bookHeight);
-                    sketch.text(book.author, bookXStart + bookXSpacing, bookYStart+50, bookWidth, bookHeight);
+                    sketch.text(book.author, bookXStart + bookXSpacing, bookYStart+70, bookWidth, bookHeight);
                     
                }
                sketch.fill(108, 157, 240);          
@@ -279,7 +287,7 @@ class Bookshelf extends React.Component {
      render() {
           return (
                <div className="projects">
-                    <div ref={this.myRef}>
+                    <div ref={this.myRef} style={divStyle}>
                     </div>
                     <p className="project-info">
                          This project uses most of what I learned about JS in Khan Academy. 
