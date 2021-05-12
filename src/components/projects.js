@@ -20,18 +20,20 @@ import websitegif from '../res/images/babyshowerwebsite.gif';
 class Projects extends React.Component {
      render() {
           return (
-               <div>
+               <div id ="projects">
                     <head>
                          <title>Michelle P. - Projects</title>
                     </head> 
+                    <h1>Projects</h1>
                     <p className="content">
                          This page contains every project I've work on in my journey to learning to code from the latest project I've worked on to the very first one. <br/>
                          I started with<a className="links "href="https://www.codecademy.com/" target="_blank" rel="noreferrer"><strong>Codecademy</strong></a>for CSS/HTML and moved to<a className= "links" href="https://www.khanacademy.org/" target="_blank" rel="noreferrer"><strong>Khan Academy</strong></a>for Javascript and SQL.<br/>
                          I will continue to add to this page as I learn more languages.
                     </p>
+                    <br/>
                     <Router basename = "/projects/">
                          <div>
-                              <h2>Javascript Projects</h2>
+                              <h3>Javascript Projects</h3>
                               <ul className="projectbar">
                                    <li className="projlink"><NavLink exact to="/" activeClassName="projactive">Bookshelf</NavLink></li>
                                    <li className="projlink"><NavLink exact to="/rain" activeClassName="projactive">Rain</NavLink></li>
@@ -74,7 +76,7 @@ class Projects extends React.Component {
                               </Switch>
                          </div>
                     </Router>
-                    <h2>HTML/CSS Projects</h2>
+                    <h3>HTML/CSS Projects</h3>
                     <div className="html-project">
                          <p className="content">
                               <img src={websitegif} alt="gif of baby shower website"/>

@@ -4,11 +4,11 @@ import './resume.css';
 class Resume extends React.Component {
     render() {
         return (
-            <div>
+            <div id = "resume">
                 <head>
                     <title>Michelle P. - Resume</title>
                 </head> 
-                <br/>
+                <h1>Resume</h1>
                 <p className="resume">Quick learning, self-starter seeking first time employment in the tech industry.
                     Below is my resume showcasing programs and skills I utilized in hospitality.
                 </p>
