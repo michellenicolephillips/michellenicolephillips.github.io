@@ -1,39 +1,28 @@
 import React from 'react';
-import {
-     BrowserRouter as Router,
-     Switch,
-     Route,
-     NavLink
-} from "react-router-dom";
+import {Link} from 'react-scroll';
 import './nav_bar_component.css';
-import Home from './home';
-import Resume from './resume';
-import Projects from './projects';
 
 class NavBar extends React.Component {
      render() {
           return ( 
-               <Router basename="/">
-                    <div>
-                         <ul className="navbar">
-                              <li className="navlink"><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
-                              <li className="navlink"><NavLink to="/projects/" activeClassName="active">Projects</NavLink></li>
-                              <li className="navlink"><NavLink exact to="/resume/" activeClassName="active">Resume</NavLink></li>
-                         </ul>
-                         <Switch>
-                              <Route path="/projects/">
-                                   <Projects />
-                              </Route>
-                              <Route path="/resume/">
-                                   <Resume />
-                              </Route>
-                              <Route path="/">
-                                   <Home />
-                              </Route>
-                         </Switch>
-                    </div>
-               </Router>
-          );
+               <nav>
+                    <ul>
+                         <li>
+                              <Link to="home" className=" navLink" smooth duration={1000}>HOME</Link>
+                         </li>
+                         <li>
+                              <Link to="about" className=" navLink" smooth duration={1000}>ABOUT</Link>
+                         </li>
+                         <li>
+                              <Link to="projects" className=" navLink" smooth duration={1000}>PROJECTS</Link>
+                         </li>
+                         <li>
+                              <Link to="resume" className=" navLink" smooth duration={1000}>RESUME</Link>
+                         </li>
+
+                    </ul>
+               </nav>
+          )
      }
 }
 

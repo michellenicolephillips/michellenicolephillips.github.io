@@ -9,7 +9,7 @@ class Header extends React.Component {
      }    
      sketch = (( sketch ) => {
          //canvas size
-        let width = 1280;
+        let width = sketch.windowWidth;
         let height = 600;
         //circles
         let sizes = [200, 350, 500];
@@ -98,7 +98,7 @@ class Header extends React.Component {
 
      render() {
           return (
-                    <div ref={this.myRef}/>
+                    <div id="home" ref={this.myRef}/>
                 
           );
      }

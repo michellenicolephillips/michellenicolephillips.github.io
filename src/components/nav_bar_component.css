@@ -1,23 +1,15 @@
-.navbar {
+li{
      list-style-type: none;
-     margin: 0;
-     padding: 0;
-     overflow: hidden;
-     background-color: #d79922;
 }
-.navlink{
+.navLink{
      display: inline;
      float: left;
-}
-a {
      display: block;
      padding: 10px;
      text-decoration: none;
      color: inherit;
+     font-weight: 1000;
 }
 li a:hover {
-     background-color: #ff6666;
-}
-.active {
-     background-color: #f13c20;
+     background-color: #9c0ba4;
 }
