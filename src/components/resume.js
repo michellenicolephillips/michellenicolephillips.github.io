@@ -4,7 +4,7 @@ import './resume.css';
 class Resume extends React.Component {
     render() {
         return (
-            <div id = "resume">
+            <div id="resume">
                 <head>
                     <title>Michelle P. - Resume</title>
                 </head> 

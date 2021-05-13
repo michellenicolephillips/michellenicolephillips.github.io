@@ -2,6 +2,7 @@
 #resume{
      margin: 20px;
      text-align: center;
+     clear:both;
 }
 #docIFrame {
      width: 900px;
