@@ -20,19 +20,18 @@ class Home extends React.Component {
                          <br/>
                          So far I've learned a little of:
                     </p>
-                    <ul class="intro">
-                         <li>HTML</li>
-                         <li>CSS</li>
-                         <li>Javascript</li>
-                         <li>SQL</li>
-                         <li>C#</li>
-                         <li>React</li>
-                         <li>Java</li>
-                    </ul>
-                    <p className="intro">
-                         Check out my projects page!
+                         <span className="language">HTML</span>
+                         <span className="language">CSS</span>
+                         <span className="language">Javascript</span>
+                         <span className="language">React</span>
+                         <br/>
+                         <span className="language">C#</span>
+                         <span className="language">Java</span>
+                         <span className="language">SQL</span>
+                         <p className="intro">
                          Currently working on the Spring Framework.
                          Follow along as I learn a new industry.
+                         Check out my projects below!
                     </p>
                </div>
           );

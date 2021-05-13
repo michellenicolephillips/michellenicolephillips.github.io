@@ -12,7 +12,7 @@
 }
 .links{
      display: inline;
-     color: #f13c20;
+     color: #0ba49c;
 }
 .projectbar {
      display: inline-block;
@@ -34,10 +34,10 @@ a {
      color: inherit;
 }
 li a:hover {
-     background-color: #ff6666;
+     background-color: #9c0ba4;
 }
 .projactive {
-     color: #f13c20;
+     color: #0ba49c;
      background-color: ##21211f;
      text-decoration: underline;
 }

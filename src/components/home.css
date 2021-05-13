@@ -8,3 +8,16 @@ h1{
 .content{
      text-align: center;
 }
+.language{
+     display: inline-block;
+     padding: .2em .6em .3em;
+     margin: 2px;
+     font-size: 75%;
+     font-weight: 700;
+     line-height: 1;    
+     background-color:#0b5fa4;
+     text-align: left;
+     line-height: 1;
+     border-radius: .25em;
+     white-space: nowrap;
+}
