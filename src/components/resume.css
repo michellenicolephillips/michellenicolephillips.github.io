@@ -1,12 +1,14 @@
 
 #resume{
-     text-align: left;
      margin: 20px;
+     text-align: center;
 }
 #docIFrame {
-     text-align: center;
      width: 900px;
      height: 1066px;
      margin: auto;
      border: solid 1px lightgray;
+  }
+  #download{
+       text-align: left;
   }

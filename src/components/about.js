@@ -10,7 +10,7 @@ class Home extends React.Component {
                     </head> 
                     <h1>Hi Y'all!</h1>
                     <h3>I'm Michelle</h3>
-                    <p className="intro">
+                    <p className="content">
                          I'm a self-taught software developer coming from the hospitality industry.
                          I have a strong background in client relations, have been a trainer in multiple roles, and took on projects outside of my comfort zone.
                          In my previous roles I've always pushed past the definition of the job description,
@@ -28,7 +28,7 @@ class Home extends React.Component {
                          <span className="language">C#</span>
                          <span className="language">Java</span>
                          <span className="language">SQL</span>
-                         <p className="intro">
+                         <p className="content">
                          Currently working on the Spring Framework.
                          Follow along as I learn a new industry.
                          Check out my projects below!
