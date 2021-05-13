@@ -1,16 +1,16 @@
 import NavBar from './components/nav_bar_component';
 import Footer from './components/footer';
-import Home from './components/home';
+import About from './components/about';
 import Projects from './components/projects';
 import Resume from './components/resume';
-import Header from './components/Header';
+import Header from './components/header';
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
       <Header/>
-      <Home/>
+      <About/>
       <Projects/>
       <Resume/>
       <Footer/>

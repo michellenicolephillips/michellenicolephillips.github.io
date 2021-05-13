@@ -45,7 +45,7 @@ class Header extends React.Component {
                 a: 100
             }
         ]
-        let numberOfCircles = 28;
+        let numberOfCircles = 50;
 
         //function for returning random element in an array
         function randomArrayElement(arr) {
@@ -74,7 +74,7 @@ class Header extends React.Component {
         };
         
           sketch.draw = () => {
-            sketch.background(33, 33, 25);
+            sketch.background(0, 0, 0);
             sketch.noStroke();
             for (let i = 0; i< numberOfCircles; i++) {
                 let circle = circles[i];
@@ -82,7 +82,7 @@ class Header extends React.Component {
                 sketch.fill(color.r, color.g, color.b, color.a);
                 sketch.ellipse(circle.x, circle.y, circle.size, circle.size);
                 if (circle.size > (circle.oGSize * sketch.random(1, 2))) {
-                    circle.size -= circle.oGSize;
+                    circle.size -= (circle.oGSize/2);
                 } else {
                     circle.size ++;
                 }

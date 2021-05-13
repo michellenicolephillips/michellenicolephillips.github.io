@@ -1,3 +1,6 @@
+.navbar{
+     background-color: #2b2b2b;
+}
 li{
      list-style-type: none;
 }
@@ -9,6 +12,7 @@ li{
      text-decoration: none;
      color: inherit;
      font-weight: 1000;
+     /* background-color: #2b2b2b */
 }
 li a:hover {
      background-color: #9c0ba4;
