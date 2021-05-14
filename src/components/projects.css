@@ -1,18 +1,18 @@
 .column1{
      float: left;
      width: 20%;
-     margin: 2%;
+     padding: 2%;
      text-align: center;
 }
 .column2{
      float: left;
      width: 72%;
-     margin: 2%;
+     padding: 2%;
 }
 .column1html, .column2html {
      float:left;
      width: 46%;
-     margin: 2%;
+     padding: 2%;
 }
 .projects{
      width: 450px;
@@ -27,11 +27,10 @@
      padding: 20px;
 }
 .projectbar {
-     /* display: inline-block; */
      list-style-type: none;
      margin: 0;
      padding: 0;
-     overflow: hidden;
+     /* overflow: hidden; */
 }
 .projlink{
      float: left;

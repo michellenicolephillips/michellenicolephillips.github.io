@@ -1,5 +1,6 @@
 import React from 'react';
 import p5 from 'p5';
+import './header.css';
 
 //banner with different colored circles that pop when they reach a certain size
 class Header extends React.Component {
@@ -98,7 +99,10 @@ class Header extends React.Component {
 
      render() {
           return (
-                    <div id="home" ref={this.myRef}/>
+                    <div>
+                        <h1 id="greeting">WELCOME Y'ALL.<br/> I'm Michelle</h1>
+                        <div id="home" ref={this.myRef}/>
+                    </div>
                 
           );
      }
