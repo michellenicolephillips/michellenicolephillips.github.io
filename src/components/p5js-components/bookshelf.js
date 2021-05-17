@@ -241,6 +241,13 @@ class Bookshelf extends React.Component {
                     r: 227,
                     g: 202,
                     b: 207
+               },
+               {
+                    title: "Five Days At Memorial",
+                    author: "Sheri Fink",
+                    r: 255,
+                    g: 255,
+                    b: 255
                }
                
           ];
