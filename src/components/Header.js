@@ -88,9 +88,7 @@ class Header extends React.Component {
                     circle.size ++;
                 }
             }
-        
-        
-          };
+        }; 
      });
 
      componentDidMount() {

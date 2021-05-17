@@ -7,9 +7,7 @@ li{
      list-style-type: none;
 }
 .navLink{
-     display: inline;
      float: left;
-     display: block;
      padding: 10px;
      text-decoration: none;
      color: inherit;

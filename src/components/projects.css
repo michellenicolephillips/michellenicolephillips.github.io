@@ -16,7 +16,7 @@
 }
 .projects{
      width: 450px;
-     height: 525px;
+     height: 550px;
      margin: 5px auto;
      padding: 10px;
      border: outset #333333;;
@@ -49,4 +49,14 @@ li a:hover {
 .projactive {
      color: #0ba49c;
      text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+     .column1, .column2, .column1html, .column2html{
+          float: none;
+          width: 100%;
+     }
+     .column1 {
+          display: inline-block;
+     }
 }

@@ -6,8 +6,9 @@ class Home extends React.Component {
           return (
                <div id="about">
                     <head>
-                         <title>Michelle P. - Home</title>
+                         <title>Michelle P.</title>
                     </head> 
+                         <h1>About Me</h1>
                          <p className="content">
                               I'm a self-taught software developer coming from the hospitality industry.
                               I have a strong background in client relations, have been a trainer in multiple roles, and took on projects outside of my comfort zone.
