@@ -2,6 +2,8 @@ import React from 'react';
 import p5 from 'p5';
 import '../projects.css';
 
+/* This component is a drawing of a city with falling stars and an airplane passing through the sky */
+
 class City extends React.Component {
      constructor(props) {
           super(props);
@@ -20,13 +22,14 @@ class City extends React.Component {
           };
           sketch.draw = () => {
                sketch.background(29, 40, 115);
+               //star drawings
                sketch.fill(255, 242, 0);
                sketch.ellipse(xPos, yPos, 10, 10);//star 1
                sketch.ellipse(xPos+50, yPos, 10, 10);//star 2
                sketch.ellipse(xPos+100, yPos, 10, 10);//star 3
                sketch.ellipse(xPos+150, yPos, 10, 10);//star 4
                sketch.ellipse(xPos+200, yPos, 10, 10);//star 5
-               //reset star movement
+               //if/else statement that has the stars fall to the bottom of the canvas and then reset to the beginning 
                if (yPos >= height) {
                     yPos -= height;
                     xPos -= width;
@@ -34,16 +37,18 @@ class City extends React.Component {
                     xPos+=5;
                     yPos+=5;
                };
+               //plane drawing
                sketch.fill(255, 255, 255);
                sketch.ellipse(xPlane+10, yPlane,70, 25);//plane body
                sketch.ellipse(xPlane+20, yPlane, 20, 60);//plane wings
-               //reset plane movement
+               //reset plane movement using if/else statement
                if (xPlane >= width){
                     xPlane -= width;
                } else {
                     xPlane++;
                };
-               sketch.fill(0, 0, 0);//buildings
+               //city at night background, buildings colored black in the shadow of the sky
+               sketch.fill(0, 0, 0);
                sketch.rect(0, 300, 50, 100);//building 1
                sketch.rect(50, 250, 75, 150);//building 2
                sketch.rect(130,300, 45, 100);//building 3

@@ -2,6 +2,9 @@ import React from 'react';
 import p5 from 'p5';
 import '../projects.css';
 
+/*this component is a fish tank. when the user clicks on the canvas, a random colored/sized fish is drawn. 
+there is a refresh button that resets the canvas and changes the positions of the bubbles to another random coordinate */
+
 class Fishtank extends React.Component {
      constructor(props) {
           super(props);
@@ -28,31 +31,34 @@ class Fishtank extends React.Component {
                sketch.noStroke();
                let bodyHeight = sketch.random(20, 100);
                let bodyWidth = sketch.random(50, 200);
-               //body
+               //fish body
                sketch.fill(sketch.random(0,255), sketch.random(0,255), sketch.random(0,255));
                sketch.ellipse(coordinateX, coordinateY, bodyWidth, bodyHeight);
-               //tail
+               //fish tail
                let tailWidth = bodyWidth/4;
                let tailHeight = bodyHeight/2;
                sketch.triangle(coordinateX-bodyWidth/2, coordinateY, coordinateX-bodyWidth/2-tailWidth, coordinateY-tailHeight, coordinateX-bodyWidth/2-tailWidth, coordinateY+tailHeight);
-               //eye
+               //fish eye
                sketch.fill(0, 0, 0);
                sketch.ellipse(coordinateX+bodyWidth/4, coordinateY, bodyHeight/5, bodyHeight/5);
           };
-          //static background
+          //static background for fish tank
           sketch.draw = () => {
                sketch.background(92, 189, 224);
                sketch.noStroke();
-               sketch.fill(58, 153, 102);//seaweed
+               //seaweed drawings
+               sketch.fill(58, 153, 102)
                sketch.rect(10, 350, 10, 50);
                sketch.rect(45, 300, 10, 100);
                sketch.rect(80, 320, 10, 80);
                sketch.rect(130, 350, 10, 50);
                sketch.rect(170, 330, 10, 70);
                sketch.rect(210, 370, 10, 30);
-               sketch.fill(82, 52, 36);//treasure chest
+               //treasure chest drawings
+               sketch.fill(82, 52, 36);
                sketch.rect(300, 350, 80, 50);
-               sketch.fill(186, 186, 15);//fastenings
+               //fastenings for treasure chest drawings
+               sketch.fill(186, 186, 15);
                sketch.rect(320, 350, 5, 50);
                sketch.rect(360, 350, 5, 50);
                sketch.rect(300, 360, 80, 5);
@@ -63,22 +69,25 @@ class Fishtank extends React.Component {
                drawBubble(300,350);
                drawBubble(20,150);
                drawBubble(300, 350);
-               //refresh button
+               //refresh button parameters
                let buttonX =325;
                let buttonY = 10;
                let buttonHeight=30;
                let buttonWidth=60;
-               sketch.fill(255,255,255);
-               sketch.rect(buttonX, buttonY, buttonWidth, buttonHeight);
-               sketch.fill(0,0,0);
-               sketch.text("Refresh", buttonX+10, buttonY+20);
                //mouse clicked movements
                sketch.mouseClicked = function(){
+                    //draws fish when clicked
                     drawFish(sketch.mouseX, sketch.mouseY);
+                    //resets drawing when refresh button is clicked
                     if (sketch.mouseX >= buttonX && sketch.mouseX <= (buttonX+buttonWidth) &&
                     sketch.mouseY >= buttonY && sketch.mouseY <= (buttonY+buttonHeight)) {
                          sketch.redraw();
                     }
+               //draw refresh button after fish so button is layed on top
+               sketch.fill(255,255,255);
+               sketch.rect(buttonX, buttonY, buttonWidth, buttonHeight);
+               sketch.fill(0,0,0);
+               sketch.text("Refresh", buttonX+10, buttonY+20);
                }     
          
         

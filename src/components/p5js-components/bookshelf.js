@@ -2,6 +2,10 @@ import React from 'react';
 import p5 from 'p5';
 import '../projects.css';
 
+/* This component is a bookshelf that holds the collection of books I've read since the start of the pandemic.
+Each object in the array contains the title of the book, and author, and the rbg numbers for the book "cover" to match
+the main color of the real life book's cover. You can scroll up and down on the shelf as more books are added*/ 
+
 const divStyle={
      overflowY: 'scroll',
      height:'400px',
@@ -13,6 +17,7 @@ class Bookshelf extends React.Component {
           super(props);
           this.myRef = React.createRef();
      }
+     //all books listed below were read from the start of the pandemic in the order that I read them
      Sketch = ( sketch ) => {
           let books = [
                {
@@ -259,9 +264,8 @@ class Bookshelf extends React.Component {
           };
   
           sketch.draw = () => {
-          // draw shelf
                sketch.background(224, 240, 211);
-               
+               //for loop to draw the shelves for the books
                for(var yPosition =120 ; yPosition < (books.length*120) ; yPosition +=120) {
                     sketch.fill(224, 187, 132);
                     sketch.rect(0, yPosition, width, 10);
@@ -270,7 +274,7 @@ class Bookshelf extends React.Component {
                let bookWidth = 70;
                let bookXStart = 15;
                let bookYStart = 20;
-               // draw one book
+               //for loop to draw books and add them to the shelves
                for (var bookIndex = 0 ; bookIndex < books.length ; bookIndex++){
                     var book = books[bookIndex];
                     var bookXSpacing = bookIndex*95;

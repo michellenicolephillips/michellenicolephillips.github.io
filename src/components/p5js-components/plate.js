@@ -2,6 +2,11 @@ import React from 'react';
 import p5 from 'p5';
 import '../projects.css';
 
+/*Component of first javascript project using p5 to get user into coding. 
+This project is a plate of food the user chose to draw.
+I chose to draw a plate of fish tacos.
+All values are hard-coded as this was a first project */
+
 class Plate extends React.Component {
      constructor(props) {
           super(props);
@@ -14,40 +19,53 @@ class Plate extends React.Component {
                sketch.createCanvas(width, height);
           };
           sketch.draw = () => {
-               sketch.background(186, 145, 20); // wooden table
+               //wooden table for background
+               sketch.background(186, 145, 20);
+               //plate outlines in black, plate is white.
                sketch.stroke(0,0,0);
                sketch.strokeWeight(1);
-               sketch.ellipse(200, 200, 350, 350); // plate
+               //outer edge of plate
+               sketch.ellipse(200, 200, 350, 350);
+               //inside portion of plate
                sketch.ellipse(200, 200, 300, 300); 
-               sketch.fill(240, 227, 173); //tortilla color
+               //tortillas using ellipses, beige color
+               sketch.fill(240, 227, 173);
                sketch.ellipse(100, 200, 100, 100); //left taco
                sketch.ellipse(200, 200, 100, 100); //center taco
                sketch.ellipse(300, 200, 100, 100); //right taco
-               sketch.fill(185, 148, 194); //fish color
+               //fish strips as rectangles, light pink color
+               sketch.fill(185, 148, 194);
                sketch.rect(90, 150, 20, 100); //left fish
                sketch.rect(190, 150, 20, 100); //center fish
                sketch.rect(290, 150, 20, 100); //right fish
-               sketch.fill(137, 222, 120); //avocado color
+               //avocado slices as triangles, light green color
+               sketch.fill(137, 222, 120);
                sketch.triangle(80, 160, 100, 220, 120, 210);//left avocado
                sketch.triangle(180, 160, 200, 220, 220, 210);//center avocado
                sketch.triangle(280, 160, 300, 220, 320, 210);//right avocado
-               sketch.fill(255, 255, 255);//cheese
-               sketch.ellipse(100, 200, 10, 10);//left cheese
+               //cheese crumbles as ellipses, white color
+               sketch.fill(255, 255, 255);
+               //left taco cheese
+               sketch.ellipse(100, 200, 10, 10);
                sketch.ellipse(120, 220, 10, 10);
                sketch.ellipse(100, 180, 10, 10);
                sketch.ellipse(80, 200, 10, 10);
                sketch.ellipse(90, 240, 10, 10);
-               sketch.ellipse(200, 200, 10, 10);//center cheese
+               //center taco cheese
+               sketch.ellipse(200, 200, 10, 10);
                sketch.ellipse(220, 220, 10, 10);
                sketch.ellipse(200, 180, 10, 10);
                sketch.ellipse(180, 200, 10, 10);
                sketch.ellipse(190, 240, 10, 10);
-               sketch.ellipse(300, 200, 10, 10);//right cheese
+               //right taco cheese
+               sketch.ellipse(300, 200, 10, 10);
                sketch.ellipse(320, 220, 10, 10);
                sketch.ellipse(300, 180, 10, 10);
                sketch.ellipse(280, 200, 10, 10);
                sketch.ellipse(290, 240, 10, 10);
-               sketch.stroke(255, 0, 0);//tomato color for mango pico
+               /*The following points make up the mango pico de gallo, different sized points her ingredient*/
+               //tomato points, red
+               sketch.stroke(255, 0, 0);
                sketch.strokeWeight(20);
                sketch.point(100, 300);
                sketch.point(130,320);
@@ -55,20 +73,23 @@ class Plate extends React.Component {
                sketch.point(150, 310);
                sketch.point(170, 300);
                sketch.point(160, 330);
-               sketch.stroke(126, 191, 139);//jalapeno color
+               //jalapeno points, green
+               sketch.stroke(126, 191, 139);
                sketch.strokeWeight(10);
                sketch.point(110, 300);
                sketch.point(120, 320);
                sketch.point(110, 310);
                sketch.point(180, 290);
                sketch.point(170, 330);
-               sketch.stroke(255, 255, 255);//onion color
+               //onion points, white
+               sketch.stroke(255, 255, 255);
                sketch.strokeWeight(20);
                sketch.point(100, 300);
                sketch.point(140, 320);
                sketch.point(160, 290);
                sketch.point(180, 320);
-               sketch.stroke(224, 154, 33);//mango color
+               //mango points, orange
+               sketch.stroke(224, 154, 33);
                sketch.strokeWeight(20);
                sketch.point(190, 300);
                sketch.point(120, 300);
