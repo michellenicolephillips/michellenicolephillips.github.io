@@ -7,10 +7,10 @@ class Header extends React.Component {
      constructor(props) {
           super(props);
           this.myRef = React.createRef();
-     }    
-     sketch = (( sketch ) => {
+    }    
+    sketch = (( sketch ) => {
          //canvas size
-        let width = sketch.windowWidth;
+        let width = window.outerWidth;
         let height = 600;
         //circles
         let sizes = [200, 350, 500];
@@ -88,22 +88,28 @@ class Header extends React.Component {
                     circle.size ++;
                 }
             }
-        }; 
-     });
+        };
+        window.onresize = function() {
+            // assigns new values for width and height variables
+            width = window.outerWidth;
+            height = 600;  
+            sketch.createCanvas(width,height);
+          }
+    });
 
-     componentDidMount() {
+    componentDidMount() {
           this.myP5 = new p5(this.sketch, this.myRef.current);
-     }
+    }
 
-     render() {
-          return (
-                    <div>
-                        <h1 id="greeting">WELCOME Y'ALL.<br/> I'm Michelle</h1>
-                        <div id="home" ref={this.myRef}/>
-                    </div>
+    render() {
+        return (
+            <div>
+                <h1 id="greeting">WELCOME Y'ALL.<br/> I'm Michelle</h1>
+                <div id="home" ref={this.myRef}/>
+            </div>
                 
-          );
-     }
+        );
+    }
 }
 
   export default Header;
