@@ -81,8 +81,8 @@ class Projects extends React.Component {
                     <h3>HTML/CSS Projects</h3>
                     <div>
                          <p className="content">
-                              <img className= "column1html" src={websitegif} alt="gif of baby shower website"/>
-                              <div className ="column2html">
+                              <img className= "gif" src={websitegif} alt="gif of baby shower website"/>
+                              <div className ="htmlInfo">
                                    <br/>
                                    <a className="links" href="https://babynelson.life/" target="_blank" rel="noreferrer">This</a>is the first project I built during the pandemic as part of a zoom baby shower. I wanted to be able to provide my sister with something other than Zoom for her guests to interact.
                                    I was able to play with different CSS elements as well as creating my first form. As it was a first project, I haven't changed much to it so that I can show where I started from compared to where I'm at now with this portfolio website.

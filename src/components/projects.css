@@ -9,7 +9,7 @@
      width: 72%;
      padding: 2%;
 }
-.column1html, .column2html {
+.gif, .htmlInfo {
      float:left;
      width: 46%;
      padding: 2%;
@@ -52,11 +52,26 @@ li a:hover {
 }
 
 @media screen and (max-width: 900px) {
-     .column1, .column2, .column1html, .column2html{
+     .column1, .column2{
           float: none;
           width: 100%;
      }
      .column1 {
           display: inline-block;
+          width: 95%;
+          margin: 0;
+          padding: 0;
+     }
+     .projects {
+          width: 400px;
+          margin: 0;
+          padding: 0;
+
+     }
+     .gif, .htmlInfo {
+          float: none;
+          width: 90%;
+          padding: 0;
+          margin: 0;
      }
 }
