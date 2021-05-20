@@ -1,11 +1,19 @@
-.intro{
-     text-align: left;
-     padding: 20px;
+#selfpic{
+     border-radius: 50%;
+}
+.self{
+float: left;
+width: 20%
+}
+.aboutme{
+float: right;
+width: 70%;
 }
 .content{
      text-align: left;
 }
 .language{
+     clear: both;
      display: inline-block;
      padding: .2em .6em .3em;
      margin: 2px;
@@ -17,4 +25,11 @@
      line-height: 1;
      border-radius: .25em;
      white-space: nowrap;
+}
+
+@media screen and (max-width: 900px) {
+     .self, .aboutme {
+          float: none;
+          width: 100%;
+     }
 }
