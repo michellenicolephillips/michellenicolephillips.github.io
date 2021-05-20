@@ -32,9 +32,12 @@ class Projects extends React.Component {
                          I started with<a className="links "href="https://www.codecademy.com/" target="_blank" rel="noreferrer"><strong>Codecademy</strong></a>for CSS/HTML and React and <a className= "links" href="https://www.khanacademy.org/" target="_blank" rel="noreferrer"><strong>Khan Academy</strong></a>for Javascript through p5.js.
                          I will continue to add to this page as I learn more languages.
                     </p>
+                    <p id = "projectsSmall">
+                         Please turn your phone landscape to view projects in their full glory.
+                    </p>
                     <br/>
                     <Router basename = "/projects/">
-                    <h3>Javascript Projects</h3>
+                    <h3 id="javascript">Javascript Projects</h3>
                          <div className="column1">
                               <ul className="projectbar">
                                    <li className="projlink"><NavLink exact to="/" activeClassName="projactive">Bookshelf</NavLink></li>
@@ -80,7 +83,7 @@ class Projects extends React.Component {
                               </Switch>
                          </div>
                     </Router>
-                    <h3>HTML/CSS Projects</h3>
+                    <h3 id="html">HTML/CSS Projects</h3>
                     <div>
                          <p className="content">
                               <img className= "gif" src={websitegif} alt="gif of baby shower website"/>

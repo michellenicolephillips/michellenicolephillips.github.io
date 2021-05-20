@@ -50,6 +50,9 @@ li a:hover {
      color: #0ba49c;
      text-decoration: underline;
 }
+#projectsSmall{
+     display: none;
+}
 
 @media screen and (max-width: 900px) {
      .column1, .column2{
@@ -73,5 +76,15 @@ li a:hover {
           width: 90%;
           padding: 0;
           margin: 0;
+     }
+}
+@media screen and (max-width: 450px) {
+     #javascript, .column1, .column2, #html, .gif, .htmlInfo {
+          display: none;
+     }
+     #projectsSmall {
+          display:inherit;
+          text-align: left;
+          margin: 30px;
      }
 }

@@ -1,4 +1,5 @@
 #greeting{
+    display: none;
     position: absolute;
     margin-top: 250px;
     width: 100%;
