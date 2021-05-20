@@ -1,7 +1,9 @@
 import React from 'react';
 import './about.css';
 
-class Home extends React.Component {
+/* About me Component introduces self and languages learned */
+
+class About extends React.Component {
      render() {
           return (
                <div id="about">
@@ -37,4 +39,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default About;

@@ -2,6 +2,8 @@ import React from 'react';
 import {Link} from 'react-scroll';
 import './nav_bar_component.css';
 
+/* Navbar component to navigate to various sectoins of the page, smooth scroll to each section */
+
 class NavBar extends React.Component {
 
      render() {

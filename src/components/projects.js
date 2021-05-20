@@ -17,6 +17,8 @@ import City from './p5js-components/city';
 import Plate from './p5js-components/plate';
 import websitegif from '../res/images/babyshowerwebsite.gif';
 
+/* Collection of all p5 components in one section. Navbar for navigating between projects */
+
 class Projects extends React.Component {
      render() {
           return (

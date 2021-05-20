@@ -5,6 +5,8 @@ import linkedinlogo from '../res/images/linkedin.png';
 import caret from '../res/images/caret.png';
 import {Link} from 'react-scroll';
 
+/* Website footer contains links to scroll back to top of page and links to socials (linkedin & github) */
+
 class Footer extends React.Component {
      render() {
           return ( 

@@ -2,7 +2,7 @@ import React from 'react';
 import p5 from 'p5';
 import './header.css';
 
-//banner with different colored circles that pop when they reach a certain size
+/* Header contains banner drawn with p5 using different colored/sized circles that shrink to smaller size once grown to max size and resets */
 class Header extends React.Component {
      constructor(props) {
           super(props);
@@ -12,7 +12,7 @@ class Header extends React.Component {
          //canvas size
         let width = window.outerWidth;
         let height = 600;
-        //circles
+        //circles sizes and empty circle array
         let sizes = [200, 350, 500];
         let circles = [];
         //circle colors
@@ -73,8 +73,8 @@ class Header extends React.Component {
             }
               
         };
-        
-          sketch.draw = () => {
+        //draw function to place circles on canvas, grow the circles, and shrink them once they reach a certain size
+        sketch.draw = () => {
             sketch.background(0, 0, 0);
             sketch.noStroke();
             for (let i = 0; i< numberOfCircles; i++) {
@@ -90,7 +90,7 @@ class Header extends React.Component {
             }
         };
         window.onresize = function() {
-            // assigns new values for width and height variables
+            // assigns new values for width and height variables when browser is resized
             width = window.outerWidth;
             height = 600;  
             sketch.createCanvas(width,height);
