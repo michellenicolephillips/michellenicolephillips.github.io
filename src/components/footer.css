@@ -5,7 +5,14 @@ body{
 .icons{
      text-align: center;
      display: inline;
+     margin: 10px;
 }
 footer a:hover{
      filter: invert();
+}
+#footer {
+     background-image: linear-gradient(135deg,#4d4a4a, #67696b);
+     clip-path: polygon(0 15vh,100% 0,100% 100%,0 100%);
+     padding: 30px;
+
 }
