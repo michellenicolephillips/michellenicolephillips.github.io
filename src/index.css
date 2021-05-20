@@ -16,6 +16,7 @@ code {
 h1, h2, h3{
   clear: both;
   text-align: center;
+  margin: 20px;
 }
 .links {
   color:  #0ba49c;
@@ -23,6 +24,6 @@ h1, h2, h3{
 }
 .content{
   clear: both;
-  margin: 20px;
+  margin: 30px;
 }
  
