@@ -1,6 +1,6 @@
 #greeting{
-    display: none;
     position: absolute;
     margin-top: 250px;
     width: 100%;
+    z-index: 1;
 }

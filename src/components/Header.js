@@ -92,8 +92,25 @@ class Header extends React.Component {
         window.onresize = function() {
             // assigns new values for width and height variables when browser is resized
             width = window.outerWidth;
-            height = 600;  
+            height = 600; 
+            circles = []; 
             sketch.createCanvas(width,height);
+            for (let i = 0; i < numberOfCircles; i++) {
+                let randomColor = randomArrayElement(colors);
+                let randomSize = randomArrayElement(sizes);
+                let randomX = sketch.random(0, width); 
+                let randomY = sketch.random(0, height);
+                let circle = {
+                    color: randomColor,
+                    size: randomSize,
+                    x: randomX,
+                    y: randomY,
+                    oGSize: randomSize
+                }
+                circles.push(circle);
+
+            }
+            sketch.redraw();
           }
     });
 

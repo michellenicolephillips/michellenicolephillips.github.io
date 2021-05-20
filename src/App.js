@@ -3,7 +3,7 @@ import Footer from './components/footer';
 import About from './components/about';
 import Projects from './components/projects';
 import Resume from './components/resume';
-import Header from './components/Header';
+import Header from './components/header';
 
 function App() {
   return (
