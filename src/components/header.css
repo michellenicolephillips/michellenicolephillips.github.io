@@ -4,3 +4,7 @@
     width: 100%;
     z-index: 1;
 }
+#home {
+    min-height: 600px;
+    height: 600px
+}

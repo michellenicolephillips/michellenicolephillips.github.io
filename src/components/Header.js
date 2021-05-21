@@ -120,11 +120,10 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1 id="greeting">WELCOME Y'ALL.<br/> I'm Michelle</h1>
-                <div id="home" ref={this.myRef}/>
-            </div>
-                
+                <div style="height: 600px; min-height:600px; display:inline-block;">
+                    <h1 id="greeting">WELCOME Y'ALL.<br/> I'm Michelle</h1>
+                    <div id="home" ref={this.myRef}/>
+                </div>
         );
     }
 }
