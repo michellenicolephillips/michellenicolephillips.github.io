@@ -22,7 +22,7 @@ class About extends React.Component {
                                    In my previous roles I've always pushed past the definition of the job description,
                                    seeking to learn more.
                                    I've helped nurture agile and scrum culture in my teams and have broken down departmental silos, creating one cohesive team.
-                                   While I come form a non-traditional background, I hope to be a great addition to the industry with the continuation of my technical education and agile and problem solving skills.
+                                   While I come from a non-traditional background, I hope to be a great addition to the industry with the continuation of my technical education, agile, and problem solving skills.
                                    <br/>
                                    So far I've learned a little of:
                               </p>
