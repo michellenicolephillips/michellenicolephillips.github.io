@@ -30,12 +30,13 @@ class About extends React.Component {
                               <span className="language">CSS</span>
                               <span className="language">Javascript</span>
                               <span className="language">React</span>
+                              <span className="language">Typescript</span>
                               <br/>
                               <span className="language">C#</span>
                               <span className="language">Java</span>
                               <span className="language">SQL</span>
                               <p className="content">
-                                   Currently working on the Spring Framework.
+                                   Currently enrolled in classes at Dallas College and working on a<a className="links" href="https://zoom-chat-easy-reader.netlify.app/" target= "_blank" rel="noreferrer">Zoom Chat Easy Reader</a> 
                                    Follow along as I learn a new industry.
                                    Check out my projects below!
                               </p>
