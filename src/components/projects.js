@@ -16,6 +16,7 @@ import Animal from './p5js-components/animal';
 import City from './p5js-components/city';
 import Plate from './p5js-components/plate';
 import websitegif from '../res/images/babyshowerwebsite.gif';
+import zoomchatgif from '../res/images/zoomChatEasyReader.gif';
 
 /* Collection of all p5 components in one section. Navbar for navigating between projects */
 
@@ -32,6 +33,15 @@ class Projects extends React.Component {
                          I started with<a className="links "href="https://www.codecademy.com/" target="_blank" rel="noreferrer"><strong>Codecademy</strong></a>for CSS/HTML and React and <a className= "links" href="https://www.khanacademy.org/" target="_blank" rel="noreferrer"><strong>Khan Academy</strong></a>for Javascript through p5.js.
                          I will continue to add to this page as I learn more languages.
                     </p>
+
+                    <h3>Zoom Chat Easy Reader</h3>
+                    <div className="content">
+                    <img className= "gif" src={zoomchatgif} alt="gif of zoomchat easy reader"/>
+                         <p className="projectInfo">
+                              Written using React with Typescript, the<a className="links" href="https://zoom-chat-easy-reader.netlify.app/" target="_blank" rel="noreferrer">Zoom Chat Easy Reader</a>makes it easy to read saved Zoom Chats by taking out
+                              the ugly and leaving only the pretty. Drag a file over or paste in your chat and then group by names, hide timestamps, add markdown, hide messages, and more! Copy all or export as a cleaned up text file when you're finished.
+                         </p>
+                    </div>
                     <p id = "projectsSmall">
                          Please turn your phone landscape to view projects in their full glory.
                     </p>
@@ -85,14 +95,14 @@ class Projects extends React.Component {
                     </Router>
                     <h3 id="html">HTML/CSS Projects</h3>
                     <div>
-                         <p className="content">
+                         <div className="content">
                               <img className= "gif" src={websitegif} alt="gif of baby shower website"/>
-                              <div className ="htmlInfo">
+                              <p className ="projectInfo">
                                    <br/>
                                    <a className="links" href="https://babynelson.life/" target="_blank" rel="noreferrer">This</a>is the first project I built during the pandemic as part of a zoom baby shower. I wanted to be able to provide my sister with something other than Zoom for her guests to interact.
                                    I was able to play with different CSS elements as well as creating my first form. As it was a first project, I haven't changed much to it so that I can show where I started from compared to where I'm at now with this portfolio website.
-                              </div>
-                         </p>
+                              </p>
+                         </div>
                     </div>
                </div>
           );
