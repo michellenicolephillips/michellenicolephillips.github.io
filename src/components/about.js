@@ -36,9 +36,8 @@ class About extends React.Component {
                               <span className="language">Java</span>
                               <span className="language">SQL</span>
                               <p className="content">
-                                   Currently enrolled in classes at Dallas College and working on a<a className="links" href="https://zoom-chat-easy-reader.netlify.app/" target= "_blank" rel="noreferrer">Zoom Chat Easy Reader</a> 
-                                   Follow along as I learn a new industry.
-                                   Check out my projects below!
+                                   Currently enrolled in classes at Dallas College and doing<a className="links" href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x" target="_blank" rel="noreferrer">Harvard's CS50.</a>
+                                   Follow along as I learn a new industry. Don't forget to check out my projects below!
                               </p>
                          </div>
                </div>
