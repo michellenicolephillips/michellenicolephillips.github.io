@@ -1,0 +1,15 @@
+/* colors.scss */
+
+/* Default Light Theme */
+:root {
+    --background: #ffe5b4;
+    --text-color: #000000;
+    --primary: #0ba49c;
+  }
+  
+  /* Dark Theme overrides */
+  .dark-theme {
+    --background: #2b2b2b;
+    --text-color: #ffffff;
+    --primary: #0ba49c; /* Keep accent colors consistent */
+  }

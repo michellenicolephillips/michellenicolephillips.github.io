@@ -1,0 +1,32 @@
+.navbar {
+     /* This turns the container into a flexbox */
+     display: flex;
+     align-items: center; /* Vertically centers everything */
+     
+     /* Existing styles */
+     background-image: linear-gradient(135deg, #4d4a4a, #67696b);
+     position: fixed;
+     width: 100%;
+     z-index: 2;
+     padding: 0 20px; /* Adds space from the edges */
+     box-sizing: border-box; /* Ensures padding doesn't break width */
+   }
+   
+   li {
+     list-style-type: none;
+   }
+   
+   .navLink, .theme-toggle {
+     /* Remove float, use display: block for links */
+     display: block;
+     padding: 15px 20px;
+     text-decoration: none;
+     color: #fff; /* Explicitly setting white for contrast */
+     font-weight: 1000;
+     cursor: pointer;
+   }
+   
+   /* Hover effect now applies to both links and the toggle button */
+   .navLink:hover, .theme-toggle:hover {
+     background-color: #9c0ba4;
+   }

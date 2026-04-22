@@ -4,6 +4,7 @@ import About from './components/about';
 import Projects from './components/projects';
 import Resume from './components/resume';
 import Header from './components/Header';
+import React from 'react';
 
 function App() {
   return (
