@@ -1,0 +1,33 @@
+/* colors.scss */
+
+/* Default Light Theme */
+:root {
+    --background: #F6F0D7;
+    --text-color: #4A554A;
+    --navigation: #C5D89D;
+    --links: #89986D;
+    --footer:#9CAB84;
+    --borders: #9CAB84;
+    /*header animation colors*/
+    --bg-color: #ffffff;
+    --c1: #96A78D;
+    --c2: #B6CEB4;
+    --c3: #D9E9CF;
+    --c4: #F0F0F0;
+  }
+  
+  /* Dark Theme overrides */
+  .dark-theme {
+    --background: #2C3930;
+    --text-color: #F5F2ED;
+    --navigation: #A27B5C;
+    --links: #DCD7C9;
+    --footer: #3F4F44;
+    --borders: #3F4F44;
+    /*header animation colors*/
+    --bg-color: #000000;
+    --c1: #5D6E64;
+    --c2: #BC9F84;
+    --c3: #DCD7C9; 
+    --c4: #1D2620; 
+  }

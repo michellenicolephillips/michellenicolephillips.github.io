@@ -1,10 +1,13 @@
+@use './colors.scss' as *;
+
+
 *{
   padding: 0;
   margin: 0;
 }
 body {
-  background-color: #2b2b2b;
-  color: #fff;
+  background-color: var(--background);
+  color: var(--text-color);
   text-align: left;
   font-family: sans-serif;
 }
@@ -19,8 +22,9 @@ h1, h2, h3{
   margin: 20px;
 }
 .links {
-  color:  #0ba49c;
+  color:  var(--links);
   display: inline;
+  font-weight: 700;
 }
 .content{
   clear: both;

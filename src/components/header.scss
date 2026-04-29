@@ -1,0 +1,22 @@
+#greeting{
+    position: absolute;
+    margin-top: 250px;
+    width: 100%;
+    z-index: 1;
+}
+
+/* header.scss */
+.header-container {
+    width: 100%;
+    overflow-x: hidden; // Keeps scrollbars away
+  }
+  
+  #home {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  canvas {
+    display: block; // Removes extra whitespace at the bottom
+  }
