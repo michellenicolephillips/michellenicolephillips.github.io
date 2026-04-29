@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: 'michellenicolephillips.github.io/',
+  base: '/',
   // This helps Vite find files in your src folder properly
   resolve: {
     alias: {
