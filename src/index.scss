@@ -22,8 +22,9 @@ h1, h2, h3{
   margin: 20px;
 }
 .links {
-  color:  var(--primary);
+  color:  var(--links);
   display: inline;
+  font-weight: 700;
 }
 .content{
   clear: both;

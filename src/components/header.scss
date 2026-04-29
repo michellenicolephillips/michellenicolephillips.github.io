@@ -4,7 +4,19 @@
     width: 100%;
     z-index: 1;
 }
-#home {
-    min-height: 600px;
-    height: 600px
-}
+
+/* header.scss */
+.header-container {
+    width: 100%;
+    overflow-x: hidden; // Keeps scrollbars away
+  }
+  
+  #home {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  canvas {
+    display: block; // Removes extra whitespace at the bottom
+  }

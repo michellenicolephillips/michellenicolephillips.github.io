@@ -1,36 +1,20 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import './nav_bar_component.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import './nav_bar_component.scss';
 
-class NavBar extends React.Component {
-  state = {
-    isDark: false
-  };
+// Define the shape of the props
+interface NavBarProps {
+  isDark: boolean;
+  toggleTheme: () => void;
+}
 
-  componentDidMount() {
-    // Check if the user previously saved a theme in localStorage
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      this.setState({ isDark: true });
-      document.body.classList.add('dark-theme');
-    }
-  }
-
-  toggleTheme = () => {
-    const newTheme = !this.state.isDark;
-    this.setState({ isDark: newTheme });
-
-    // Apply the class and save to localStorage
-    if (newTheme) {
-      document.body.classList.add('dark-theme');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark-theme');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
+class NavBar extends React.Component<NavBarProps> {
   render() {
+    // Destructure props for cleaner usage
+    const { isDark, toggleTheme } = this.props;
+
     return (
       <nav>
         <ul className="navbar">
@@ -46,10 +30,14 @@ class NavBar extends React.Component {
           <li>
             <Link to="resume" className="navLink" smooth duration={1000}>RESUME</Link>
           </li>
-          {/* Theme Toggle Button */}
           <li>
-            <button className="theme-toggle" onClick={this.toggleTheme}>
-              {this.state.isDark ? '☀️' : '🌙'}
+            <button
+              className="theme-toggle" 
+              onClick={toggleTheme}
+              aria-label={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+              data-tooltip={isDark ? 'Light Mode' : 'Dark Mode'}
+            >
+              <FontAwesomeIcon icon={isDark ? faSun : faMoon} />
             </button>
           </li>
         </ul>

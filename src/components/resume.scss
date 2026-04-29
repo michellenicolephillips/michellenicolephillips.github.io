@@ -1,23 +1,29 @@
-
-#resume{
+#resume {
      width: 100%;
      max-width: 1200px;
      margin: 0 auto;
-     text-align: center;
-     clear:both;
-
-}
-#docIFrame {
+     
+     /* Flexbox makes alignment easy */
+     display: flex;
+     flex-direction: column; /* Stack items vertically */
+     align-items: center;    /* Center items horizontally */
+     clear: both;
+   }
+   
+   #docIFrame {
      width: 800px;
      height: 1066px;
-     margin: auto;
      border: solid 1px lightgray;
-  }
-  #download{
-       text-align: left;
-  }
-  @media screen and (max-width: 900px) {
-       #docIFrame {
-            display: none;
-       }
-  }
+     /* margin: auto;  <-- Not needed anymore with Flexbox */
+   }
+   
+   #download {
+     margin-top: 20px; /* Adds space between the iframe and the button */
+     text-align: center; /* Ensures the link is centered in the paragraph */
+   }
+   
+   @media screen and (max-width: 900px) {
+     #docIFrame {
+       display: none;
+     }
+   }

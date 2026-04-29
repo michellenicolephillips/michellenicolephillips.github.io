@@ -1,89 +1,69 @@
 import React from 'react';
 import p5 from 'p5';
-import './header.css';
+import './header.scss';
 
-// 1. Properly capitalized Interfaces
 interface Circle {
-  color: CircleColor;
+  color: string;
   size: number;
   x: number;
   y: number;
   oGSize: number;
 }
 
-interface CircleColor {
-  r: number;
-  b: number;
-  g: number;
-  a: number;
+interface HeaderProps {
+  isDark: boolean;
 }
 
-class Header extends React.Component {
-  // 2. Properly typed Ref
+class Header extends React.Component<HeaderProps> {
   myRef = React.createRef<HTMLDivElement>();
   myP5: p5 | null = null;
+  resizeTimeout: ReturnType<typeof setTimeout> | null = null;
+
+  // Reads the current CSS variables from the body
+  getColorsFromCss = (): string[] => {
+    const style = getComputedStyle(document.body);
+    return [
+      style.getPropertyValue('--c1').trim(),
+      style.getPropertyValue('--c2').trim(),
+      style.getPropertyValue('--c3').trim(),
+      style.getPropertyValue('--c4').trim()
+    ];
+  };
+
+  // Re-usable method to destroy and recreate the sketch
+  initP5 = () => {
+    if (this.myP5) {
+      this.myP5.remove();
+    }
+    if (this.myRef.current) {
+      this.myRef.current.innerHTML = '';
+    }
+    this.myP5 = new p5(this.sketch, this.myRef.current as HTMLElement);
+  };
+
+  // Debounced resize handler to remount the sketch
+  handleResize = () => {
+    if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
+    this.resizeTimeout = setTimeout(() => {
+      this.initP5();
+    }, 200);
+  };
 
   sketch = (p: p5) => {
-    let width = window.outerWidth;
+    // Use innerWidth for full screen accuracy
+    let width = window.innerWidth;
     let height = 600;
     const sizes = [200, 350, 500];
-    
-    // 3. Explicitly typed array
     let circles: Circle[] = [];
-    
-    const colors = [
-      { r: 11, g: 164, b: 156, a: 100 },
-      { r: 156, g: 11, b: 164, a: 100 },
-      { r: 11, g: 95, b: 164, a: 100 },
-      { r: 164, g: 11, b: 95, a: 100 }
-    ];
-    
+    let colors: string[] = this.getColorsFromCss();
     const numberOfCircles = 50;
 
     function randomArrayElement<T>(arr: T[]): T {
-      let randomIndex = Math.floor(p.random(0, arr.length));
-      return arr[randomIndex];
+      return arr[Math.floor(p.random(0, arr.length))];
     }
 
     p.setup = () => {
       p.createCanvas(width, height);
-      for (let i = 0; i < numberOfCircles; i++) {
-        let randomColor = randomArrayElement(colors);
-        let randomSize = randomArrayElement(sizes);
-        let circle: Circle = {
-          color: randomColor,
-          size: randomSize,
-          x: p.random(0, width),
-          y: p.random(0, height),
-          oGSize: randomSize
-        };
-        circles.push(circle);
-      }
-    };
-
-    p.draw = () => {
-      p.background(0, 0, 0);
-      p.noStroke();
-      for (let i = 0; i < circles.length; i++) {
-        let circle = circles[i];
-        p.fill(circle.color.r, circle.color.g, circle.color.b, circle.color.a);
-        p.ellipse(circle.x, circle.y, circle.size, circle.size);
-        
-        if (circle.size > (circle.oGSize * p.random(1, 2))) {
-          circle.size -= (circle.oGSize / 2);
-        } else {
-          circle.size++;
-        }
-      }
-    };
-
-    // 4. Fixed the resize logic
-    window.onresize = () => {
-      width = window.outerWidth;
-      height = 600;
-      circles = []; // Clear existing array instead of re-declaring it
-      p.createCanvas(width, height);
-      
       for (let i = 0; i < numberOfCircles; i++) {
         circles.push({
           color: randomArrayElement(colors),
@@ -94,29 +74,52 @@ class Header extends React.Component {
         });
       }
     };
+
+    p.draw = () => {
+      const style = getComputedStyle(document.body);
+      const bgHex = style.getPropertyValue('--text-color').trim();
+      p.background(bgHex || '#000000');
+      
+      p.noStroke();
+      for (let i = 0; i < circles.length; i++) {
+        let circle = circles[i];
+        p.fill(circle.color);
+        p.ellipse(circle.x, circle.y, circle.size, circle.size);
+        
+        if (circle.size > (circle.oGSize * p.random(1, 2))) {
+          circle.size -= (circle.oGSize / 2);
+        } else {
+          circle.size++;
+        }
+      }
+    };
   };
 
   componentDidMount() {
-    this.myP5 = new p5(this.sketch, this.myRef.current as HTMLElement);
+    this.initP5();
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentDidUpdate(prevProps: HeaderProps) {
+    // If the theme toggles, re-initialize to pick up new CSS variables
+    if (prevProps.isDark !== this.props.isDark) {
+      this.initP5();
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.myP5) this.myP5.remove();
+    if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
+    window.removeEventListener('resize', this.handleResize);
   }
 
   render() {
     return (
-      <div>
+      <div className="header-container">
         <h1 id="greeting">WELCOME Y'ALL.<br/> I'm Michelle</h1>
         <div id="home" ref={this.myRef} />
       </div>
     );
-  }
-  componentWillUnmount() {
-    // 1. Stop the p5 sketch entirely
-    if (this.myP5) {
-      this.myP5.remove();
-    }
-    
-    // 2. Remove the global resize listener so it doesn't 
-    // try to run on a component that no longer exists
-    window.onresize = null; 
   }
 }
 
